@@ -69,20 +69,6 @@ bot.on("message", function(message) {
 bot.on("message", function(message) {
     if(message.author.equals(bot.user)) return;
 
-    if (message.content == "Закрытая ссылка") {
-        var embed = new Discord.RichEmbed()
-        .addField("Закрытая ссылка для игры|closed link 🕹️", "http://wormax.io/?party=TG7529739")
-        .addField("Важное", "Не передавать ссылку кому-либо,кто не находится в этом чате,играть можно с `любым` ником")
-        .setFooter("GROUP TOP-GAMERS ")
-        .setColor(0x1ff)
-        message.channel.sendEmbed(embed);
-        
-    }
-});
-
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
-
     if (message.content == "Постскриптум") {
         var embed = new Discord.RichEmbed()
         .addField("Просьба для Модерации/Постскриптум 🔖","тчк")
