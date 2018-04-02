@@ -27,14 +27,6 @@ bot.on("message", function(message) {
 bot.on("message", function(message) {
     if(message.author.equals(bot.user)) return;
 
-    if (message.content == "Всем привет") {
-        message.channel.sendMessage(":wave:");
-    }
-});
-
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
-
     if (message.content == "Бот,как дела") {
         message.channel.sendMessage("Как сметана бела");
     }
