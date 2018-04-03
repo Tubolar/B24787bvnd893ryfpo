@@ -39,7 +39,7 @@ bot.on("message", function(message) {
         var embed = new Discord.RichEmbed()
         .addField("Пока что я на стадии разработки", "-,-")
         .addField("Скоро будет бомба(но это не точно)","version 1.1.1312, Создатель:ȤȬŇŢįꝅ")
-        .setThumbnail("https://i01.fotocdn.net/s21/109/public_pin_l/279/2540377708.jpg")
+        .setThumbnail("https://media2.giphy.com/media/l3vR16pONsV8cKkWk/giphy.gif")
         .setColor(0xcca300)
         message.channel.sendEmbed(embed);
     }
@@ -61,34 +61,8 @@ bot.on("message", function(message) {
 bot.on("message", function(message) {
     if(message.author.equals(bot.user)) return;
 
-    if (message.content == "Постскриптум") {
-        var embed = new Discord.RichEmbed()
-        .addField("Просьба для Модерации/Постскриптум 🔖","тчк")
-        .addField("Важное", "Если увидите кого-то из [BR] на этом сервере-гнать куда подальше(банить навсегда)")
-        .setFooter("Администрация TOP-GAMERS ")
-        .setColor(0x4)
-        message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
-
     if (message.content == "Бот,помоги") {
         message.channel.sendMessage(message.author.toString() + ",мой префикс `.+`");
-    }
-});
-
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
-
-    if (message.content == "ASPH") {
-        var embed = new Discord.RichEmbed()
-        .addField("Список тех,кого можно унижать и банить на данном сервере","ASPH")
-        .addField("При встрече на этом сервере", "`1.Kazakskiy. 2.der Luftkuss 3.[BR]CLAN 4.(Осенний aka Citric Anton, Смелость.) 5.[SD]DIEGO 6.[SD]Joe_Speen 7.[SD]Даhя.`")    
-        .setFooter("Администрация TOP-GAMERS ")
-        .setColor(0x3)
-        message.channel.sendEmbed(embed);
     }
 });
 
