@@ -4,8 +4,10 @@ const TOKEN ="NDI1MzQxMDU0ODc5OTI0MjI0.DZGNdw.DshsvSQwIOs6JrS7-6I9eQ7DE_k";
 
 var bot = new Discord.Client();
 
-bot.on("ready", function() {
-    console.log("К бою готов!");
+bot.on("ready", () => {
+    bot.user.setGame('Всегда готов помочь!');
+    var servers = bot.guilds.array().map(g => g.name).join('.');
+    console.log('Бот готов');
 });
 
 bot.on("message", function(message) {
@@ -415,6 +417,22 @@ bot.on("message", function(message) {
 
     if (message.content == ".+roles") {
         message.channel.sendMessage(message.author.toString() + ",чекни ЛС :wink: ");
+    }
+});
+
+bot.on("message", function(message) {
+    if(message.author.equals(bot.user)) return;
+
+    if (message.content == "Всем привет") {
+        message.react('👋');
+    }
+});
+
+bot.on("message", function(message) {
+    if(message.author.equals(bot.user)) return;
+
+    if (message.content == "Всем привет)") {
+        message.react('👋');
     }
 });
 
