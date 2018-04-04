@@ -105,6 +105,7 @@ bot.on("message", function(message) {
         .addField("Участник" , message.author.username )
         .addField("Вы были приглашены", message.member.joinedAt )
         .addField("Ваш ID", message.author.id )
+        .addField("Ваш аккаунт был создан", message.author.createdAt)
         .setColor(0x0080ff)
         
         message.channel.sendEmbed(embed);
