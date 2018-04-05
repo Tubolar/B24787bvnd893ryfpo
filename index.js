@@ -5,7 +5,8 @@ const TOKEN ="NDI1MzQxMDU0ODc5OTI0MjI0.DZGNdw.DshsvSQwIOs6JrS7-6I9eQ7DE_k";
 var bot = new Discord.Client();
 
 bot.on("ready", () => {
-    bot.user.setGame('подсчёт убытков...');
+    bot.user.setStatus('online')
+    bot.user.setGame('c кем-то', 'https://www.twitch.tv/nasa/')
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
