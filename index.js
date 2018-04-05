@@ -5,7 +5,7 @@ const TOKEN ="NDI1MzQxMDU0ODc5OTI0MjI0.DZGNdw.DshsvSQwIOs6JrS7-6I9eQ7DE_k";
 var bot = new Discord.Client();
 
 bot.on("ready", () => {
-    bot.user.setGame('Всегда готов помочь!');
+    bot.user.setGame('подсчёт убытков...');
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
