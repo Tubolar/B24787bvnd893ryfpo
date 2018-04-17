@@ -611,7 +611,7 @@ bot.on("message", function(message) {
     if (message.content == "Бот,статус") {
         var embed = new Discord.RichEmbed()
         .setThumbnail("https://www.cybertext.com/cyberimage/process.gif")
-        .setTitle("Статус бота @Helper#4887")
+        .setTitle("Статус бота Helper")
         .setDescription("Обновление командных модулей")
         .setColor(0x669900)
         message.channel.sendEmbed(embed);
