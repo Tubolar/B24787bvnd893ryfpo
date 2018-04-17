@@ -605,4 +605,18 @@ bot.on('message', msg => {
     }
 });
 
+bot.on("message", function(message) {
+    if(message.author.equals(bot.user)) return;
+
+    if (message.content == "Бот,статус") {
+        var embed = new Discord.RichEmbed()
+        .setThumbnail("https://www.cybertext.com/cyberimage/process.gif")
+        .setTitle("Статус бота @Helper#4887")
+        .setDescription("Обновление командных модулей")
+        .setColor(0x669900)
+        message.channel.sendEmbed(embed);
+    }
+});
+
+
 bot.login(TOKEN);
