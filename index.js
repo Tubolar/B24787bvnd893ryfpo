@@ -6,7 +6,7 @@ var bot = new Discord.Client();
 
 bot.on("ready", () => {
     bot.user.setStatus('online')
-    bot.user.setActivity('Технические работы,возможны сбои в работе', { type: 'PLAYING' });
+    bot.user.setActivity('Обновление модулей', { type: 'PLAYING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
