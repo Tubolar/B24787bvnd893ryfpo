@@ -6,7 +6,7 @@ var bot = new Discord.Client();
 
 bot.on("ready", () => {
     bot.user.setStatus('idle')
-    bot.user.setActivity('ZONTik', { type: 'WATCHING' });
+    bot.user.setActivity('Система обновлена успешно', { type: 'PLAYING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
