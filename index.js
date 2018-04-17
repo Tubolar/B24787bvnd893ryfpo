@@ -605,30 +605,5 @@ bot.on('message', msg => {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
-
-    if (message.content == "Бот,статус") {
-        var embed = new Discord.RichEmbed()
-        .setThumbnail("https://www.cybertext.com/cyberimage/process.gif")
-        .setTitle("Статус бота Helper")
-        .setDescription("Обновление командных модулей")
-        .setColor(0x669900)
-        message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
-
-    if (message.content == ".+hangmaninfo") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Игра Виселица")
-        .setDescription("Бот загадает слово,вам нужно будет его отгадать.\nПосредством нажатия на индикаторы(реакции)которые поставит бот.\nЗа эту игру отвечают участники,имеющие роль Game_mod\nДля того чтобы начать игру,Вам нужно обратиться к соответствующим учатникам")
-        .setColor(0x26734d)
-        message.channel.sendEmbed(embed);
-    }
-});
-
 
 bot.login(TOKEN);
