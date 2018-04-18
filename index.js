@@ -605,16 +605,5 @@ bot.on('message', msg => {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
-
-    if (message.content == "Права на @Helper") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Права на бота @Helper#4887")
-        .setDescription("• Автор @[MD]ȤȬŇŢįꝅ#1286\n• Владелец  @[MD]ȤȬŇŢįꝅ#1286 ")
-        .setColor(0x66cc00)
-       message.channel.sendEmbed(embed);
-    }
-});
 
 bot.login(TOKEN);
