@@ -610,7 +610,7 @@ bot.on("message", function(message) {
 
     if (message.content == "Права на @Helper#4887") {
         var embed = new Discord.RichEmbed()
-        .setTitle("Права на бота @Helper#4887")
+        .setTitle("Права на бота @Helper")
         .setDescription("• Автор @[MD]ȤȬŇŢįꝅ#1286\n• Владелец  @[MD]ȤȬŇŢįꝅ#1286 ")
         .setColor(0x66cc00)
        message.channel.sendEmbed(embed);
