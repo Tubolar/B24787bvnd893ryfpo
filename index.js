@@ -43,7 +43,7 @@ bot.on("message", function(message) {
         var embed = new Discord.RichEmbed()
         .addField("Пока что я на стадии разработки", "-,-")
         .addField("Скоро будет бомба(но это не точно)","version 1.1.1312, Создатель:ȤȬŇŢįꝅ")
-        .setThumbnail("https://media2.giphy.com/media/l3vR16pONsV8cKkWk/giphy.gif")
+        .setThumbnail("https://media.giphy.com/media/ctGFLebG1AqK4/giphy.gif")
         .setColor(0xcca300)
         message.channel.sendEmbed(embed);
     }
