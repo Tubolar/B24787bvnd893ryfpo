@@ -75,15 +75,8 @@ bot.on("message", function(message) {
 
     if (message.content == ".+help") {
         var embed = new Discord.RichEmbed()
-        .addField("Рабочие команды ", "⌨️")
-        .addField(".+help","Список команд")
-        .addField(".+link","Коммандные ссылки для игры wormax.io")
-        .addField(".+avatar", "Ваш аватар")
-        .addField(".+aboutme", "Информация о вас")
+	.setDescription("• .+help\n• .+link\n• .+avatar\n• .+aboutme\n• .+serverinfo\n• .+game\n• .+roles\n• .+rules")
         .setColor(0x330033)
-        .addField(".+serverinfo", "Информация о сервере")
-        .addField(".+game", "Информация об играх с ботом")
-        .addField(".+rules", "Бот отправит Вам личным сообщением правила нашего сервера")
         .setFooter("Helper bot ©2018 ")
         message.channel.sendEmbed(embed);
     }
