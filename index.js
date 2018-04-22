@@ -6,7 +6,7 @@ var bot = new Discord.Client();
 
 bot.on("ready", () => {
     bot.user.setStatus('online')
-    bot.user.setActivity('Бич', { type: 'WATCHING' });
+    bot.user.setActivity('Мда.....', { type: 'PLAYING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
