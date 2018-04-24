@@ -6,7 +6,7 @@ var bot = new Discord.Client();
 
 bot.on("ready", () => {
     bot.user.setStatus('online')
-    bot.user.setActivity('Роскомнадзор сходят с ума', { type: 'PLAYING' });
+    bot.user.setActivity('.+help', { type: 'LISTENING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
@@ -24,7 +24,7 @@ bot.on("message", function(message) {
     if(message.author.equals(bot.user)) return;
 
     if (message.content == "Бот,что делаешь?") {
-        message.channel.sendMessage("Подчиняюсь твоим командам xD");
+        message.channel.sendMessage("Подчиняюсь твоим командам");
     }
 });
 
