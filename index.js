@@ -6,7 +6,7 @@ var bot = new Discord.Client();
 
 bot.on("ready", () => {
     bot.user.setStatus('online')
-    bot.user.setActivity('.+help', { type: 'LISTENING' });
+    bot.user.setActivity('301 members!!! 🎉', { type: 'LISTENING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
