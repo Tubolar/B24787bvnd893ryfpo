@@ -12,32 +12,36 @@ bot.on("ready", () => {
 });
 
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Привет бот") {
         message.channel.sendMessage("Здарова,как жизнь?");
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Бот,что делаешь?") {
         message.channel.sendMessage("Подчиняюсь твоим командам");
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Бот,как дела") {
         message.channel.sendMessage("Как сметана бела");
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Инфа") {
         var embed = new Discord.RichEmbed()
@@ -49,8 +53,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+link") {
         var embed = new Discord.RichEmbed()
@@ -62,16 +67,18 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Бот,помоги") {
         message.channel.sendMessage(message.author.toString() + ",мой префикс `.+`");
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+help") {
         var embed = new Discord.RichEmbed()
@@ -82,8 +89,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+avatar") {
         var embed = new Discord.RichEmbed()
@@ -92,8 +100,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+aboutme") {
         var embed = new Discord.RichEmbed()
@@ -109,8 +118,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+serverinfo") {
         var embed = new Discord.RichEmbed()
@@ -128,8 +138,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Слово") {
         var embed = new Discord.RichEmbed()
@@ -139,8 +150,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+faqActive") {
         var embed = new Discord.RichEmbed()
@@ -151,8 +163,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+gameword") {
         var embed = new Discord.RichEmbed()
@@ -163,8 +176,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+game") {
         var embed = new Discord.RichEmbed()
@@ -179,8 +193,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+gamemath") {
         var embed = new Discord.RichEmbed()
@@ -195,8 +210,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Вычисление старт") {
         var embed = new Discord.RichEmbed()
@@ -206,8 +222,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Вычисление=лёгкий") {
         var embed = new Discord.RichEmbed()
@@ -217,8 +234,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Вычисление=средний") {
         var embed = new Discord.RichEmbed()
@@ -228,9 +246,10 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
-
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+	
     if (message.content == "Вычисление=сложный") {
         var embed = new Discord.RichEmbed()
         .setTitle("Уровень сложности=сложный")
@@ -239,8 +258,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Вычисление=максимальный") {
         var embed = new Discord.RichEmbed()
@@ -250,8 +270,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Вычисление=экстерн") {
         var embed = new Discord.RichEmbed()
@@ -261,8 +282,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Пример=лёгкий") {
         var embed = new Discord.RichEmbed()
@@ -277,8 +299,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Пример=средний") {
         var embed = new Discord.RichEmbed()
@@ -293,8 +316,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Пример=сложный") {
         var embed = new Discord.RichEmbed()
@@ -309,8 +333,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Пример=максимальный") {
         var embed = new Discord.RichEmbed()
@@ -325,8 +350,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bbot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Пример=экстерн") {
         var embed = new Discord.RichEmbed()
@@ -348,8 +374,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+gamenum") {
         var embed = new Discord.RichEmbed()
@@ -360,8 +387,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Стартовое число") {
         var embed = new Discord.RichEmbed()
@@ -371,8 +399,9 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+rules") {
         var embed = new Discord.RichEmbed()
@@ -385,16 +414,18 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+rules") {
         message.channel.sendMessage(message.author.toString() + ",проверь свои личные сообщения! :wink: ");
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+roles") {
         var embed = new Discord.RichEmbed()
@@ -407,40 +438,45 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+roles") {
         message.channel.sendMessage(message.author.toString() + ",чекни ЛС :wink: ");
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Всем привет") {
         message.react('👋');
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Всем привет") {
         message.react('👋');
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == "Привет") {
         message.react('👋');
     }
 });
 
-bot.on("message", function(message) {
-    if(message.author.equals(bot.user)) return;
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
 
     if (message.content == ".+ping") {
         message.reply(`Мой отклик составляет ${Math.round(bot.ping)} мc`);
