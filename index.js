@@ -48,7 +48,7 @@ bot.on("message", async message => {
         .addField("Пока что я на стадии разработки", "-,-")
         .addField("Скоро будет бомба(но это не точно)","version 1.4.2.1618, Создатель:ȤȬŇŢįꝅ")
         .setThumbnail("https://equity.guru/wp-content/uploads/2018/02/Powers-up.gif")
-        .setColor(0xcca300)
+        .setColor(0x40ff00)
         message.channel.sendEmbed(embed);
     }
 });
