@@ -1,4 +1,5 @@
 const Discord = require ("discord.js");
+const embedColor = require("./embedcolor.json")
 
 var bot = new Discord.Client();
 
