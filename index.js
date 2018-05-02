@@ -1,6 +1,6 @@
 const Discord = require ("discord.js");
 
-const TOKEN ="Hahaha no no no,it's secret hahaha";
+const TOKEN ="Hahaha no no no,it's secret hahaha.You noob hahah";
 
 var bot = new Discord.Client();
 
