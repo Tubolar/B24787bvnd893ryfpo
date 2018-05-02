@@ -663,4 +663,18 @@ bot.on("message", async message => {
     };
 });
 
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+
+    if (message.content.startsWith == (".+say")) {
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Недостаточно прав.")
+        let botmessage = args.join(" ");
+        message.delete().catch();
+        message.channel.send(botmessage);
+
+    }
+});
+
+
 bot.login(process.env.TOKEN);
