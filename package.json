@@ -1,5 +1,5 @@
 {
-  "name": "[MD]Helper",
+  "name": "helper",
   "version": "1.0.0",
   "description": "The bot is helper",
   "main": "index.js",
