@@ -627,6 +627,21 @@ bot.on("message", async message => {
 });
 
 
+
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+
+    let rresponses = ["Приветсвую тебя", "Добрый вечер!", "Здарова", "Привет,как дела?", "Как прошёл день?","Привет!", "Пока", ":wave:", "Ну привет"];
+    let rresult = Math.floor((Math.random() * rresponses.length));
+
+    
+    if (message.content.match(/всем привет/i)) 
+    {
+       message.channel.send(rresponses[rresult]);
+    };
+});
+
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
@@ -634,7 +649,7 @@ bot.on("message", async message => {
     let responses = ["Приветсвую тебя", "Добрый вечер!", "Здарова", "Привет,как дела?", "Как прошёл день?","Привет!", "Пока", ":wave:", "Ну привет"];
     let result = Math.floor((Math.random() * responses.length));
 
-    if (message.content.match(/привет/i)) 
+    if (message.content.match(/привет всем/i)) 
     {
        message.channel.send(responses[result]);
     };
@@ -667,14 +682,11 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if (message.content.startsWith == (".+say")) {
-        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Недостаточно прав.")
-        let botmessage = args.join(" ");
-        message.delete().catch();
-        message.channel.send(botmessage);
+    if (message.content.match(/здаров/i)) 
+    {
+       message.react("👋")
+    };
 
-    }
 });
-
 
 bot.login(process.env.TOKEN);
