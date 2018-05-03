@@ -5,7 +5,7 @@ var bot = new Discord.Client();
 
 bot.on("ready", () => {
     bot.user.setStatus('online')
-    bot.user.setActivity('аварийном режиме.Работа с перебоями.', { type: 'WATCHING' });
+    bot.user.setActivity('в аварийном режиме.Работа с перебоями.', { type: 'WATCHING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
