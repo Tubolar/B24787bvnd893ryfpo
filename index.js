@@ -47,7 +47,7 @@ bot.on("message", async message => {
         .addField("Пока что я на стадии разработки", "-,-")
         .addField("Скоро будет бомба(но это не точно)","version 1.4.2.1618, Создатель:ȤȬŇŢįꝅ")
         .setThumbnail("https://equity.guru/wp-content/uploads/2018/02/Powers-up.gif")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
 });
@@ -82,7 +82,7 @@ bot.on("message", async message => {
     if (message.content == ".+help") {
         var embed = new Discord.RichEmbed()
 	.setDescription("```yaml\n•.+help\n•.+link\n•.+avatar\n•.+aboutme\n•.+serverinfo\n•.+game\n•.+roles\n•.+rules```")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         .setFooter("Helper bot ©2018")
         message.channel.sendEmbed(embed);
     }
@@ -95,6 +95,7 @@ bot.on("message", async message => {
     if (message.content == ".+avatar") {
         var embed = new Discord.RichEmbed()
         .setImage(message.author.avatarURL)
+	.setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
 });
@@ -111,7 +112,7 @@ bot.on("message", async message => {
         .addField("Вы были приглашены", message.member.joinedAt )
         .addField("Ваш ID", message.author.id )
         .addField("Ваш аккаунт был создан", message.author.createdAt)
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         
         message.channel.sendEmbed(embed);
     }
@@ -132,7 +133,7 @@ bot.on("message", async message => {
         .addField("ID сервера", message.guild.id, true)
         .addField("Регион сервера", message.guild.region, true)
         .addField("Создатель", message.guild.owner, true)
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
 });
@@ -144,7 +145,7 @@ bot.on("message", async message => {
     if (message.content == "Слово") {
         var embed = new Discord.RichEmbed()
         .addField("Количество букв", Math.floor(Math.random() * 12 + 1  ))
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
 });
@@ -157,7 +158,7 @@ bot.on("message", async message => {
         var embed = new Discord.RichEmbed()
         .setTitle("Роль Active Member 🏆")
         .setDescription("Автоматически выдаётся ботом за проявление активности.")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
        message.channel.sendEmbed(embed);
     }
 });
@@ -170,7 +171,7 @@ bot.on("message", async message => {
         var embed = new Discord.RichEmbed()
         .setTitle("Игра в слово 🎲")
         .setDescription("Будет выпадать случайное число,которое обозначает количество букв в слове или аббревиатуре.Вам будет нужно его подобрать.")
-        .setColor("0x40ff00")
+        .setColor(embedCOlor.color)
        message.channel.sendEmbed(embed);
     }
 });
@@ -186,7 +187,7 @@ bot.on("message", async message => {
         .addField("Игра в Вычисление", "Вам будет дана цепочка чисел с арифметическими действиями(Пример короче) Вам нужно будет его решить.")
         .addField("Подробнее узнать о каждой игре можно с помощью следующих команд:", ".+gameword-подробная информация об игре Слово      .+gamemath-подробная информация об игре в Вычисления                       .+gamenum-подробная информация об игре Ряд чисел")
         .setFooter("Раздел: Игры; Helper bot 2018 ©")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         .setThumbnail("http://aarp.cdn.arkadiumhosted.com/4.0-aarp/Content/Images/default/600x600_gameicon.jpg")        
         message.channel.sendEmbed(embed);
     }
@@ -204,7 +205,7 @@ bot.on("message", async message => {
         .setDescription("У этой игры существуют следующие уровни сложности:                            1.Легкий                       2.Средний                            3.Сложный                                 4.Максимальный           5.Экстерн                                                                                                                                             Для того чтобы получить новый пример существует команда Пример=(ваш уровень)                                                                                     Бот даст пример с той сложностью,которую вы указали")
         .setFooter("Раздел:Игры Helper bot 2018 ©")
         .addField("Для того чтобы указать уровень сложности существует следующая команда", "Вычисление=(ваш уровень)")     
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
 });
@@ -216,7 +217,7 @@ bot.on("message", async message => {
     if (message.content == "Вычисление старт") {
         var embed = new Discord.RichEmbed()
         .setTitle("Укажите уровень сложности")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
        message.channel.sendEmbed(embed);
     }
 });
@@ -228,7 +229,7 @@ bot.on("message", async message => {
     if (message.content == "Вычисление=лёгкий") {
         var embed = new Discord.RichEmbed()
         .setTitle("Уровень сложности=лёгкий")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
        message.channel.sendEmbed(embed);
     }
 });
@@ -240,7 +241,7 @@ bot.on("message", async message => {
     if (message.content == "Вычисление=средний") {
         var embed = new Discord.RichEmbed()
         .setTitle("Уровень сложности=средний")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
        message.channel.sendEmbed(embed);
     }
 });
@@ -252,7 +253,7 @@ bot.on("message", async message => {
     if (message.content == "Вычисление=сложный") {
         var embed = new Discord.RichEmbed()
         .setTitle("Уровень сложности=сложный")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
        message.channel.sendEmbed(embed);
     }
 });
@@ -264,7 +265,7 @@ bot.on("message", async message => {
     if (message.content == "Вычисление=максимальный") {
         var embed = new Discord.RichEmbed()
         .setTitle("Уровень сложности=максимальный")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
        message.channel.sendEmbed(embed);
     }
 });
@@ -276,7 +277,7 @@ bot.on("message", async message => {
     if (message.content == "Вычисление=экстерн") {
         var embed = new Discord.RichEmbed()
         .setTitle("Уровень сложности=экстерн")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
        message.channel.sendEmbed(embed);
     }
 });
@@ -293,7 +294,7 @@ bot.on("message", async message => {
         .addField("Умножить на", Math.floor(Math.random() * 20 + 1  ))
         .addField("Разделить на", Math.floor(Math.random() * 8 + 1  ))
         .addField("Прибавить", Math.floor(Math.random() * 10 + 1  ))
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
 });
@@ -310,7 +311,7 @@ bot.on("message", async message => {
         .addField("Умножить на", Math.floor(Math.random() * 40 + 1  ))
         .addField("Разделить на", Math.floor(Math.random() * 10 + 1  ))
         .addField("Отнять", Math.floor(Math.random() * 20 + 1  ))
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
 });
@@ -327,7 +328,7 @@ bot.on("message", async message => {
         .addField("Умножить на", Math.floor(Math.random() * 80 + 1  ))
         .addField("Разделить на", Math.floor(Math.random() * 40 + 1  ))
         .addField("Прибавить", Math.floor(Math.random() * 30 + 1  ))
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
 });
@@ -344,7 +345,7 @@ bot.on("message", async message => {
         .addField("Умножить на", Math.floor(Math.random() * 120 + 1  ))
         .addField("Разделить на", Math.floor(Math.random() * 80 + 1  ))
         .addField("Прибавить", Math.floor(Math.random() * 500 + 1  ))
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
 });
@@ -368,7 +369,7 @@ bot.on("message", async message => {
         .addField("Прибавить к полученному числу сумму следующих чисел", "Сумма чисел")
         .addField("Число 1", Math.floor(Math.random() * 25000 + 1  ))
         .addField("И число 2", Math.floor(Math.random() * 15000 + 1  ))
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
 });
@@ -381,7 +382,7 @@ bot.on("message", async message => {
         var embed = new Discord.RichEmbed()
         .setTitle("Игра случайное число.")
         .setDescription("Бот будет давать случайное число.Вам нужно будет продолжить ряд,по его типу, т.е если число чётное-значит и ряд будет чётным,тоже самой и с нечётным числом.")
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
        message.channel.sendEmbed(embed);
     }
 });
@@ -393,7 +394,7 @@ bot.on("message", async message => {
     if (message.content == "Стартовое число") {
         var embed = new Discord.RichEmbed()
         .setDescription(Math.floor(Math.random() * 1500 + 1  ))
-        .setColor(0x40ff00)
+        .setColor(embedColor.color)
        message.channel.sendEmbed(embed);
     }
 });
