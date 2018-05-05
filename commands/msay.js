@@ -4,7 +4,6 @@ module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Недостаточно прав.")
 
     const sayEmbed = new Discord.RichEmbed()
-    .setTitle(message.author.username + " сказал: ")
     .setDescription(args.join(" "))
     .setColor("#15f153")
     message.delete().catch();
