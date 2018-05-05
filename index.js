@@ -171,7 +171,7 @@ bot.on("message", async message => {
         var embed = new Discord.RichEmbed()
         .setTitle("Игра в слово 🎲")
         .setDescription("Будет выпадать случайное число,которое обозначает количество букв в слове или аббревиатуре.Вам будет нужно его подобрать.")
-        .setColor(embedCOlor.color)
+        .setColor(embedColor.color)
        message.channel.sendEmbed(embed);
     }
 });
