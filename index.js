@@ -105,56 +105,6 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if (message.content == ".+avatar") {
-        var embed = new Discord.RichEmbed()
-        .setImage(message.author.avatarURL)
-	.setColor(embedColor.color)
-        message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == ".+aboutme") {
-        var embed = new Discord.RichEmbed()
-        .setThumbnail(message.author.avatarURL)
-        .setDescription("Информация о вас")
-        .addField("Участник" , message.author.username )
-        .addField("Вы были приглашены", message.member.joinedAt )
-        .addField("Ваш ID", message.author.id )
-        .addField("Ваш аккаунт был создан", message.author.createdAt)
-        .setColor(embedColor.color)
-        
-        message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == ".+serverinfo") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Информация о сервере")
-        .addField("Имя сервера", "TOP-GAMERS")
-        .setThumbnail("https://riki.dotabuff.com/t/l/EaDa0Wt2Rt.png")
-        .addField("Дата создания", message.guild.createdAt)
-        .addField("Вы были приглашены", message.member.joinedAt)
-        .addField("Количество участников", message.guild.memberCount, true)
-        .addField("ID сервера", message.guild.id, true)
-        .addField("Регион сервера", message.guild.region, true)
-        .addField("Создатель", message.guild.owner, true)
-        .setColor(embedColor.color)
-        message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
     if (message.content == "Слово") {
         var embed = new Discord.RichEmbed()
         .addField("Количество букв", Math.floor(Math.random() * 12 + 1  ))
