@@ -690,4 +690,44 @@ bot.on("message", async message => {
 
 });
 
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+
+    let byeresponse = ["Давай 👏", "Удачи", "Пока", "Всего-хорошего", "До завтра!",  message.author.username + ",спокойной ночи 💤 (если сейчас ночь)", "До встречи!"];
+    let byeresult = Math.floor((Math.random() * byeresponse.length)); 
+
+    if (message.content.match(/всем пока/i)) 
+    {
+       message.channel.send(byeresponse[byeresult]);
+    };
+});
+
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+
+    let byeresponse = ["Давай 👏", "Удачи", "Пока", "Всего-хорошего", "До завтра!",  message.author.username + ",спокойной ночи 💤 (если сейчас ночь)", "До встречи!"];
+    let byeresult = Math.floor((Math.random() * byeresponse.length)); 
+
+    if (message.content.match(/пока всем/i)) 
+    {
+       message.channel.send(byeresponse[byeresult]);
+    };
+});
+
+
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+
+    let byeresponse = ["🖖", "💤", "👋", "👏"];
+    let byeresult = Math.floor((Math.random() * byeresponse.length)); 
+
+    if (message.content.match(/пока/i)) 
+    {
+       message.react(byeresponse[byeresult]);
+    };
+});
+
 bot.login(process.env.TOKEN);
