@@ -2,9 +2,8 @@ const Discord = require ("discord.js");
 const embedColor = require("./embedcolor.json");
 const fs = require("fs");
 const botconfig = require("./botconfig.json");
-bot.commands = new Discord.Collection();
-
 var bot = new Discord.Client();
+bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err,files) =>{
 
