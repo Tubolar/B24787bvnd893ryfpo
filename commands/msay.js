@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
         } else {
             message.reply({embed:{
                 "description": `**${message.author}**,произошла ошибка\nПричина:**нет достаточных прав**`,
-                "color": embedColor.errorcolor
+                "color": 16711680
               }
             })
         }
