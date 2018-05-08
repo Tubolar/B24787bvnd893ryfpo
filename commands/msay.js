@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 
     const sayEmbed = new Discord.RichEmbed()
     .setDescription(args.join(" "))
-    .setColor(00e699)
+    .setColor("00e699")
     message.delete().catch();
 
 
