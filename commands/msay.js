@@ -1,13 +1,11 @@
 const Discord = require("discord.js");
-const embedColor = require("../embedColor.json");
-const ercolor = require("../embedColor.json")
- 
+
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Недостаточно прав.")
 
     const sayEmbed = new Discord.RichEmbed()
     .setDescription(args.join(" "))
-    .setColor(embedColor.color)
+    .setColor(00e699)
     message.delete().catch();
 
 
