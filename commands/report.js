@@ -9,8 +9,8 @@ module.exports.run = async (bot, message, args) => {
 
     .setTitle("Заявления")
     .setColor("0x00cc99")
-    .addField("Заявленный участник", `${rUser} с ID ${rUser.id}`)
-    .addField("Заявление подал", `${message.author} с ID ${message.author.id}`, true)
+    .addField("Заявленный участник", `${rUser}`)
+    .addField("Заявление подал", `${message.author}`, true)
     .addField("Канал", message.channel, true)
     .addField("Время", message.createdAt, true)
     .addField("Причина", rreason)
