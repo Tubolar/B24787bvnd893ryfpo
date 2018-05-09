@@ -41,8 +41,8 @@ bot.on("message", async message => {
 });
 
 bot.on("ready", () => {
-    bot.user.setStatus('online')
-    bot.user.setActivity('хостинг 24/7', { type: 'PLAYING' });
+    bot.user.setStatus('dnd')
+    bot.user.setActivity('картошку с пюрешкой', { type: 'WATCHING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
