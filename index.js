@@ -392,16 +392,6 @@ bot.on("message", async message => {
     }
 });
 
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == ".+ping") {
-        message.reply(`Мой отклик составляет ${Math.round(bot.ping)} мc`);
-    }
-});
-
 var usage = "`.+hangman <ID канала> <ваша фраза>`\n`Пример: .+hangman 368845035560763402 Пирожки`";
 var letters = ["🇦", "🇧", "🇨", "🇩", "🇪", "🇫", "🇬", "🇭", "🇮", "🇯", "🇰", "🇱", "🇲", "🇳", "🇴", "🇵", "🇶", "🇷", "🇸", "🇹", "🇺", "🇻", "🇼", "🇽", "🇾", "🇿"];
 var unicode = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
