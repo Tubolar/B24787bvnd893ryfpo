@@ -665,4 +665,27 @@ bot.on("message", async message => {
     };
 });
 
+
+
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+
+    if (message.content.match(/ку/i)) 
+    {
+       message.react("👋")
+    };
+
+});
+
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+
+    if (message.content.match(/хай/i)) 
+    {
+       message.react("👋")
+    };
+
+});
 bot.login(process.env.TOKEN);
