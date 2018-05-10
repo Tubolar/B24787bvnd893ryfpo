@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
     let modRole = message.guild.roles.find("name", "Moderator");
     if(message.member.roles.has(modRole.id)) {
-        message.bulkDelete(args[0]).then(() =>{
+        message.channel.bulkDelete(args[0]).then(() =>{
             message.channel.send(`Удалено ${args[0]}сообщений`).then(message => message.delete(5000));
         }); 
     } else {
