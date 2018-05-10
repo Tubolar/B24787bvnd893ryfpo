@@ -42,7 +42,7 @@ bot.on("message", async message => {
 
 bot.on("ready", () => {
     bot.user.setStatus('dnd')
-    bot.user.setActivity('картошку с пюрешкой', 'https://www.twitch.tv/doomsday', { type: 'STREAMING' });
+    bot.user.setActivity('картошку с пюрешкой', { type: 'WATCHING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
