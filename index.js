@@ -5,7 +5,7 @@ const botconfig = require("./botconfig.json");
 var bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 const hook = new Discord.WebhookClient('444178004428455936', HOOK_TOKEN);
-const HOOK_TOKEN = (process.env.HOOK_TOKEN);
+hook.login(process.env.HOOK_TOKEN)
 
 
 fs.readdir("./commands/", (err,files) =>{
