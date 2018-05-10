@@ -4,8 +4,7 @@ const fs = require("fs");
 const botconfig = require("./botconfig.json");
 var bot = new Discord.Client();
 bot.commands = new Discord.Collection();
-var hook = new Discord.WebhookClient('444178004428455936');
-hook.login(process.env.HOOK_TOKEN)
+
 
 
 fs.readdir("./commands/", (err,files) =>{
@@ -50,13 +49,6 @@ bot.on("ready", () => {
     console.log('Бот готов');
 });
 
-let hookEmbed = new Discord.RichEmbed(
-    {
-        "description": "Бот **Helper** был успешно запущен.",
-        "color": 3056342
-      }
-)
-hook.send(hookEmbed);
 
 bot.on("message", async message => {
     if(message.author.bot) return;
