@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
     if(message.member.roles.has(moddRole.id)) {
     setTimeout(function(){
         tomute.removeRole(muterole.id);
-        message.channel.send(`<@${tomute.id}> снова может писать сообщения в текстовых каналах.`);
+        message.channel.send(`пользователь <@${tomute.id}> снова может писать сообщения в текстовых каналах.`);
     }, ms(mutetime));
 }
 } 
