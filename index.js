@@ -42,7 +42,7 @@ bot.on("message", async message => {
 
 bot.on("ready", () => {
     bot.user.setStatus('dnd')
-    bot.user.setActivity('добавление модуля "поиск",а также .+weather', { type: 'WATCHING' });
+    bot.user.setActivity('систему разрешений,новые команды', { type: 'WATCHING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
