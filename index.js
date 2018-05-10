@@ -44,7 +44,7 @@ bot.on("message", async message => {
 
 bot.on("ready", () => {
     bot.user.setStatus('dnd')
-    bot.user.setActivity('систему разрешений,новые команды', { type: 'WATCHING' });
+    bot.user.setGame('GTA 5', 'https://www.twitch.tv/insize'
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
