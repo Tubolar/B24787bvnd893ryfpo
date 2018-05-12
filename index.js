@@ -83,9 +83,11 @@ bot.on("message", async message => {
 
     if (message.content == "Инфа") {
         var embed = new Discord.RichEmbed()
-        .addField("Пока что я на стадии разработки", "-,-")
-        .addField("Скоро будет бомба(но это не точно)","version 1.4.2.1618, Создатель:ȤȬŇŢįꝅ")
+        .setTitle("Бот Helper")
+        .addField("Дата создания","28/11/2017")
+	.addField("Создатель", "<@336807875605168128>")
         .setThumbnail("https://equity.guru/wp-content/uploads/2018/02/Powers-up.gif")
+	.setFooter("Helper bot ©2018|Все права защищены")
         .setColor(embedColor.color)
         message.channel.sendEmbed(embed);
     }
