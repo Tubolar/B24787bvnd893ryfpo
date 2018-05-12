@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const errorcolor = require("../embedcolor.json");
+const errorcolor = require("./embedcolor.json");
  
 module.exports.run = async (bot, message, args) => {
     var modEmb = new Discord.RichEmbed()
