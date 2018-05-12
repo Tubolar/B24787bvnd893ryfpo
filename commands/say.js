@@ -1,6 +1,13 @@
 const Discord = require("discord.js");
+const errorcolor = require("../embedcolor.json");
 
 module.exports.run = async (bot, message, args) => {
+    
+     var erEmbed = new Discord.RichEmbed()
+    .setDescription(`${message.author},у вас недостаточно прав.`)
+    .setColor(errorcolor.error)
+
+    
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Недостаточно прав.")
     let botmessage = args.join(" ");
     message.delete().catch();
@@ -9,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
         if(message.member.roles.has(modRole.id)) {
         message.channel.send(botmessage)
         } else {
-         message.reply(",у Вас недостаточно прав.")
+         message.channel.send(erEmbed)
         }
     };
 module.exports.help = {
