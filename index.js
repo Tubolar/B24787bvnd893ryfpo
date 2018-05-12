@@ -611,7 +611,7 @@ bot.on("message", async message => {
     if(message.content.startsWith(".+start")){
         let modRole = message.guild.roles.find("name", "Game_mod");
         if(message.member.roles.has(modRole.id)) {
-        message.channel.send(wordembed)
+        message.channel.send(`Пусть стартовым словом будет **${gamewords[resultword]}**`)
         } else {
             message.reply("У Вас недостаточно прав,обратитесь к **роли** ``Game_mod``")
         }
