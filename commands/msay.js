@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const errorcolor = require("./embedcolor.json");
 
 module.exports.run = async (bot, message, args) => {
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Недостаточно прав.")
