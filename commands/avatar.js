@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const embedColor = require("./embedColor.json");
+const embedColor = require("/embedColor.json");
  
 module.exports.run = async (bot, message, args) => {
 
