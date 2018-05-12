@@ -1,11 +1,10 @@
 const Discord = require("discord.js");
-const errorcolor = require("./embedcolor.json");
 const ms = require("ms");
 module.exports.run = async (bot, message, args) => {
 
     var erEmbed = new Discord.RichEmbed()
     .setDescription(`${message.author},у вас недостаточно прав.`)
-    .setColor(errorcolor.error)
+    .setColor(0xb30000)
     
     let tomute = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!tomute) return message.reply(",не могу найти участника");
