@@ -1,6 +1,11 @@
 const Discord = require("discord.js");
+const errorcolor = require("../embedcolor.json");
 const ms = require("ms")
 module.exports.run = async (bot, message, args) => {
+    
+    var erEmbed = new Discord.RichEmbed()
+    .setDescription(`${message.author},у вас недостаточно прав.`)
+    .setColor(errorcolor.error)
 
     let tomute = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!tomute) return message.reply(",не могу найти участника");
@@ -14,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     await(tomute.addRole(muterole.id));
     message.reply(`<@${tomute.id}> получил запрет на **разговор в текстовых каналах на **${ms(ms(mutetime))}`);
     } else {
-        message.reply(",у Вас недостаточно прав.")
+        message.channel.send(erEmbed)
     };
 
     let moddRole = message.guild.roles.find("name", "Moderator");
