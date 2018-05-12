@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("Команды для Модераторов сервера")
     .setDescription("```css\n,mute\n,unmute\n,tempmute\n,warn\n,clear```")
     .setFooter("Модуль:Модерация.")
-    .setTimestamp(new Date(Date))
+    .setTimestamp()
 
     let modRole = message.guild.roles.find("name", "Moderator");
     if(message.member.roles.has(modRole.id)) {
