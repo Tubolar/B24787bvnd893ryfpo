@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const embedColor = require("/embedColor.json");
  
 module.exports.run = async (bot, message, args) => {
 
@@ -8,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
     var embed = new Discord.RichEmbed()
     .setImage(user.displayAvatarURL)
-    .setColor(embedColor.color)
+    .setColor(0x00cc99)
     message.channel.sendEmbed(embed);
 }
 
