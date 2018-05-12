@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     var modEmb = new Discord.RichEmbed()
     .setTitle("Команды для Модераторов сервера")
-    .setDescription("```css\n,mute\n,unmute\,tempmute\n,warn\n,clear")
+    .setDescription("```css\n,mute\n,unmute\,tempmute\n,warn\n,clear```")
     .setFooter("Модуль:Модерация.")
     .setTimestamp(new Date(Date))
 
