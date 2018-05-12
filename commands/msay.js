@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
     var erEmbed = new Discord.RichEmbed()
     .setDescription(`${message.author},у вас недостаточно прав.`)
-    .setColor(errorcolor.error)
+    .setColor(0xb30000)
 
     const sayEmbed = new Discord.RichEmbed()
     .setDescription(args.join(" "))
