@@ -44,7 +44,7 @@ bot.on("message", async message => {
 
 bot.on("ready", () => {
     bot.user.setStatus('dnd')
-    bot.user.setActivity('Грация пельмешки', { type: 'WATCHING' });
+    bot.user.setActivity('Eleonor ECND', { type: 'WATCHING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
     console.log('Бот готов');
 });
