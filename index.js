@@ -46,7 +46,8 @@ bot.on("ready", () => {
     bot.user.setStatus('dnd')
     bot.user.setActivity('Eleonor ECND', { type: 'WATCHING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
-    bot.send('446714574536835082', 'Бот <@425341054879924224> снова в сети!');
+    var channel = client.channels.get('446714574536835082');
+    channel.sendMessage("Бот Helper снова в сети!");
     console.log('Бот готов');
 });
 
