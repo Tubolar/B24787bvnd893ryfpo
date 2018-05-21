@@ -44,9 +44,9 @@ bot.on("message", async message => {
 
 bot.on("ready", () => {
     bot.user.setStatus('dnd')
-    bot.user.setActivity('Eleonor ECND', { type: 'WATCHING' });
+    bot.user.setActivity('Russia.tv', { type: 'WATCHING' });
     var servers = bot.guilds.array().map(g => g.name).join('.');
-    var channel = bot.channels.get('446714574536835082');
+    var channel = bot.channels.get('414530901607841794');
     channel.sendMessage("Бот Helper снова в сети!");
     console.log('Бот готов');
 });
