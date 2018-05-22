@@ -1,5 +1,5 @@
 # Helperbot.ccnd
-Testingbot....ccnd
+Tbt...
 
 All rights reserved
 
