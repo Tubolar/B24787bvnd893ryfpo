@@ -22,11 +22,12 @@ module.exports.run = async (bot, message, args) => {
   .setTitle("Функция радужной роли")
   .addField("Частота смены цвета", args[6])
   .setTimestamp()
-  .setFooter("RR Function handler")
-  message.channel.send(embed)
+  .setFooter("RR Function handler");
+  
     if(message.member.roles.has(modRole.id)) {
         let intr = args[6]
     setInterval(() => { discoRole(); }, intr);
+        message.channel.send(embed)
      
   } else {
     message.reply(`у Вас недостаточно прав.`);
