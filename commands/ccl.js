@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
   .setAuthor(message.author.username)
   .setColor("#ff0066")
   .setTitle("Функция радужной роли")
-  .addField("Частота смены цвета", args[0])
+  .addField("Частота смены цвета", args[6])
   .setTimestamp()
   .setFooter("RR Function handler")
   message.channel.send(embed)
