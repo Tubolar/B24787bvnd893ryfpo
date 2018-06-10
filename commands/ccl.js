@@ -15,11 +15,12 @@ module.exports.run = async (bot, message, args) => {
           });
         });
       }
+   
    var embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#ff0066")
   .setTitle("Функция радужной роли")
-  .addField("Частота смены цвета", "5000")
+  .addField("Частота смены цвета", args[0])
   .setTimestamp()
   .setFooter("RR Function handler")
   message.channel.send(embed)
