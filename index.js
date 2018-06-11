@@ -731,4 +731,16 @@ if(swearWords.some(word => message.content.match(word)) ) {
   message.delete()
 }
 });
+
+bot.on("message", message => {
+    let mRole = message.guild.roles.find('name', "ZONTIk")
+    if(message.content.startsWith("++rall:stop")) {
+        if(message.member.roles.has(mRole.id)) {
+        message.channel.sendMessage("Функция радужной роли отключена.");
+        setTimeout(() => { console.log(process.exit(0)); }, 300);
+      } else {
+        message.reply(`у Вас недостаточно прав.`);
+        }
+      }
+})
 bot.login(process.env.TOKEN);
