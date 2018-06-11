@@ -4,6 +4,7 @@ module.exports.run = async (bot, message, args) => {
     let statuses = {
         "online": "online",
         "on": "online",
+        "o": "online",
         "invisible": "invisible",
         "offline": "invisible",
         "off": "invisible",
@@ -24,6 +25,7 @@ module.exports.run = async (bot, message, args) => {
       if(status === "off") status = "invisible";
       if(status === "i") status = "invisible";
       if(status === "offline") status = "invisible";
+      if(status === "o") status = "online";
       bot.user.setStatus(status)
       .then(u=> {
         message.channel.send(`Статус изменён на ${status}`).then(setTimeout(message.delete.bind(message), 1000));
