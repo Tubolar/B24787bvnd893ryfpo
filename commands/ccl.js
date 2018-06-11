@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const config = require("../config.json");
-const roles = process.env.ROLES;
+const roles = config.RTD;
 
 module.exports.run = async (bot, message, args) => {
     const modRole = message.guild.roles.find('name', "ZONTIk") 
@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
         roles.forEach((role) => {
           let tRole = message.guild.roles.find("name", roles);
           tRole.edit({color: random}).catch(e => {
-            return message.channel.sendMessage(":x: **Error:** The role you specified in the `config.json` is either not a role on this server, or his a role higher than the highest role that I have.");
+            return message.channel.sendMessage("Произошла ошибка,посмотрите  консоль.");
           });
         });
       }
