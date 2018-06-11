@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const config = require("../config.json");
-const roles = config.rTD;
+const roles = process.env.ROLES;
 
 module.exports.run = async (bot, message, args) => {
     const modRole = message.guild.roles.find('name', "ZONTIk") 
