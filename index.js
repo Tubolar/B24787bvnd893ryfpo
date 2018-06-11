@@ -720,6 +720,15 @@ if(message.content.startsWith("Бот,отключи радужную роль")
   message.reply(`у Вас недостаточно прав.`);
   }
 }
+});
 
+bot.on("message", async message => {
+    if(message.author.bot) return;
+const swearWords = ["http://", "https://"];
+const Role = message.guild.roles.find(`name`, 'Mute')
+if(swearWords.some(word => message.content.match(word)) ) {
+  message.member.addRole(Role)
+  message.delete()
+}
 });
 bot.login(process.env.TOKEN);
