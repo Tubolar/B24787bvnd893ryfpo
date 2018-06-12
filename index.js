@@ -772,7 +772,6 @@ bot.on("message", async message => {
 const enBadw = [/fack/i, /fuuck/i, /cock/i, /tit/i, /bitc/i, /fuck/i, /gay/i, /sucker/i, /hick/i, /pussy/i, /bich/i, /stup/i, /dick/i, /penis/i, /prosti/i,/tart/i, /fuc/i, /noob/i, /f*ck/i, /schmuck/i, /paddel/i, /cur/i, /autism/i, /chmo/i, /eb/i, /sosi/i, /xu/i, /nyb/i, /xyesos/i, /lox/i, /typo/i, /sex/i, /секас/i, /секс/i, /sekas/i, /gom/i, /gnid/i, /piska/i, /sis/i, /bomz/i, /boln/i, /aytist/i, /dayn/i, /loh/i, /swinia/i, /plun/i];
 
 const Role = message.guild.roles.find(`name`, 'Mute')
-if(message.author.id == "336807875605168128") return message.delete()
 if(enBadw.some(word => message.content.match(word)) ) {
   message.member.addRole(Role)
   message.delete()
