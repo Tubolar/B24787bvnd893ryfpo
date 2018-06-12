@@ -682,6 +682,8 @@ const allowedUsers = config.allowedUsers;
 const roles = config.roleToDisco;
 
 bot.on("message", message => {
+	if(message.author.bot) return;
+	if(message.channel.type === "dm") return;
   function discoRole() {
     let random = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
     let colors = ["#a6a6a6","#ffcccc","#ff66ff","#cc99ff","#ccffff","#ccff99","#ff9933","#595959","#66ff33","#cc6699","#003366","#336699","#002266","#993333","#999966","#333399","#660066","#336600","#0000e6","#4d1300","#ffe6cc","#ffdab3","#ffce99","#ffb566","#ffa94d","#ff9c33","#ff901a","#ff8400","#e67700","#b35c00","#994f00","#804200","#992600","#602040","#250e1a","#999900","#339966","#133926","#0d261a","#67cb9b","#54c48e","#267326","#66cc66","#808000","#ff9900","#99003d","#ff4d94","#6b00b3","#2e004d","#00cc00","#0080ff","#3d3d5c","#7575a3","#ff0000","#cc0000","#ff4d4d","#19334d","#29a3a3","#5bd7d7","#db4dff","#cccc00","#802000","#cc3300","#993300","#00ff55","#1aff1a","#666600","#e600e6","#b300b3","#ff80ff","#990099","#595959","#0000cc","#3333ff","#0066cc","#c653c6","#9494b8","#0033cc","#993366","#705c66","#4d3399","#993333","#994d33","#998033","#809933","#33994d","#333399","#803399","#ff9933","#33ff99","#ff3333","#33ff33","#3366ff","#6633ff","#33ccff","#1a8cff","#ffc61a"]
@@ -723,6 +725,7 @@ if(message.content.startsWith("Бот,отключи радужную роль")
 });
 
 bot.on("message", async message => {
+	if(message.channel.type === "dm") return;
     if(message.author.bot) return;
 const swearWords = ["http://", "https://"];
 const Role = message.guild.roles.find(`name`, 'Mute')
@@ -733,6 +736,8 @@ if(swearWords.some(word => message.content.match(word)) ) {
 });
 
 bot.on("message", message => {
+	if(message.author.bot) return;
+	if(message.channel.type === "dm") return;
     let mRole = message.guild.roles.find('name', "ZONTIk")
     if(message.content.startsWith("++rall:stop")) {
         if(message.member.roles.has(mRole.id)) {
@@ -744,6 +749,7 @@ bot.on("message", message => {
       }
 })
 bot.on("message", async message => {
+	if(message.channel.type === "dm") return;
     if(message.author.bot) return;
 const filter = [/превет/i, /привт/i, /пожалуста/i, /пажалуйста/i, /сколька/i, /кагд/i, /довно/i, /чтото/i, /ктото/i, /почемуто/i, /зачемто/i, /менут/i, /ришил/i, /пака/i, /минемум/i, /оранджевый/i, /коекто/i, /фиалетовый/i, /грамата/i, /граматно/i, /отенки/i ,/дабавить/i, /крута/i, /хател/i, /менятся/i, /здел/i, /остановитса/i, /сибе/i, /што/i, /хто/i, /воопще/i, /вапще/i, /дла/i, /праверки/i, /счем/i, /скем/i, /пач/i, /щя/i, /шя/i, /щто/i, /обьявления/i, /падъезд/i, /пасажир/i, /позал/i, /удол/i, /тса/i, /всети/i, /активо/i, /проста/i, /не можно/i, /класн/i, /цто/i, /симва/i, /апрос/i, /чят/i, /дастал/i, /упомину/i, /дискорт/i, /харош/i, /ща/i, /помоч/i, /вап/i, /апас/i, /чо/i, /чё/i, /панят/i, /сматр/i, /пригло/i, /девач/i, /комманды/i, /даеш/i, /естествено/i, /ешё/i, /ищё/i, /чево/i, /чиво/i, /заприщены/i, /запрещенны/i, /сылку/i, /силку/i, /поседи/i, /принцепе/i, /прекрепил/i, /чтоли/i, /чтали/i, /юнность/i, /дивя/i, /тристо/i, /адин/i, /четыри/i, /пж/i, /нуда/i, /сроботал/i, /астав/i, /видио/i, /видил/i, /дич/i, /временый/i, /тварит/i, /вазм/i, /придл/i, /панимаешь/i, /пастоянно/i, /постаянно/i, /постояно/i, /тирпеть/i, /восимь/i, /девить/i, /мусарку/i, /проффессионалом/i, /нечайно/i, /ничайно"/i, /"ничяяно/i, /нечяяно/i, /пашёл/i, /пошо/i, /наверно/i, /видиш/i, /скоко/i, /раскажите/i, /ешо/i];
 if(filter.some(word => message.content.match(word)) ) {
@@ -758,5 +764,20 @@ if(filter.some(word => message.content.match(word)) ) {
   embed.setFooter("Words Filter")
   filterch.send({embed: embed}).then(message.delete())
 }
-})
+});
+
+bot.on("message", async message => {
+	if(message.channel.type === "dm") return;
+        if(message.author.bot) return;
+const enBadw = [/fack/i, /fuuck/i, /cock/i, /tit/i, /bitc/i, /fuck/i, /gay/i, /sucker/i, /hick/i, /pussy/i, /bich/i, /stup/i, /dick/i, /penis/i, /prosti/i,/tart/i, /fuc/i, /noob/i, /f*ck/i, /schmuck/i, /paddel/i, /cur/i, /autism/i, /chmo/i, /eb/i, /sosi/i, /xu/i, /nyb/i, /xyesos/i, /lox/i, /typo/i, /sex/i, /секас/i, /секс/i, /sekas/i, /gom/i, /gnid/i, /piska/i, /sis/i, /bomz/i, /boln/i, /aytist/i, /dayn/i, /loh/i, /swinia/i, /plun/i];
+
+const Role = message.guild.roles.find(`name`, 'Mute')
+if(message.author.id == "336807875605168128") return message.delete()
+if(enBadw.some(word => message.content.match(word)) ) {
+  message.member.addRole(Role)
+  message.delete()
+  
+}
+});
+
 bot.login(process.env.TOKEN);
