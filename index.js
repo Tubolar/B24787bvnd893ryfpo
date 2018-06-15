@@ -779,4 +779,15 @@ if(enBadw.some(word => message.content.match(word)) ) {
 }
 });
 
+bot.on("message", async message => {
+    if(message.author.bot) return;
+const filter = [/а/i, /б/i, /в/i, /г/i, /д/i, /е/i, /ё/i, /ж/i, /з/i, /и/i, /й/i, /к/i, /л/i, /м/i, /н/i, /о/i, /п/i, /р/i, /с/i, /т/i, /у/i, /ф/i, /х/i, /ц/i, /ч/i, /ш/i, /щ/i, /ъ/i, /ы/i, /ь/i, /э/i, /ю/i, /я/i]
+if(message.channel.id == '414534158761852938') {
+if(filter.some(word => message.content.match(word)) ) {
+  message.delete()
+}
+}
+})
+
+
 bot.login(process.env.TOKEN);
