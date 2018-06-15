@@ -10,8 +10,8 @@ module.exports.run = async (bot, message, args) => {
             let tRole = message.guild.roles.find("name", "Group");
             let dRole = message.guild.roles.find("name", "Посетитель");
             let rdRole = message.guild.roles.find("name", "Гость");
-            let cArole = ["#080707", "#080707", "#080707", "#310125", "#191f20"];
-            let ctRole = ["#000066","#000000","#333399","#4040bf"];
+            let cArole = ["#080707","#1f1f2e", "#310125", "#191f20"];
+            let ctRole = ["#000066","#0d0d0d","#333399","#4040bf"];
             let cdRole = ["#95291d","#d53b2a","#d94f3f","#aa2f22"];
             let crdRole = ["#217961","#1b6451","#268c71","#31b491"];
             let cctRoler = Math.floor((Math.random() * ctRole.length)); 
