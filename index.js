@@ -3,6 +3,8 @@ const embedColor = require("./embedcolor.json");
 const fs = require("fs");
 const botconfig = require("./botconfig.json");
 var bot = new Discord.Client();
+const cmds = require('./cmds_strings.json');
+const cmd = require('./cmd_strings.json');
 bot.commands = new Discord.Collection();
 
 
@@ -134,7 +136,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if (message.content == ".+gameword") {
+    if (message.content == "++gameword") {
         var embed = new Discord.RichEmbed()
         .setTitle("Игра в слово 🎲")
         .setDescription("Будет выпадать случайное число,которое обозначает количество букв в слове или аббревиатуре.Вам будет нужно его подобрать.")
@@ -147,18 +149,19 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if (message.content == ".+game") {
+    if (message.content == "++game") {
         var embed = new Discord.RichEmbed()
         .setTitle("Игры с ботом 🎮")
         .addField("Игра в Слово", "Будет выпадать случайное число,которое обозначает количество букв в слове или аббревиатуре.Вам будет нужно его подобрать.")
         .addField("Игра в Вычисление", "Вам будет дана цепочка чисел с арифметическими действиями(Пример короче) Вам нужно будет его решить.")
-        .addField("Подробнее узнать о каждой игре можно с помощью следующих команд:", ".+gameword-подробная информация об игре Слово      .+gamemath-подробная информация об игре в Вычисления                       .+gamenum-подробная информация об игре Ряд чисел")
-        .setFooter("Раздел: Игры; Helper bot 2018 ©")
+        .addField("Подробнее узнать о каждой игре можно с помощью следующих команд:", ".+gameword\n.+gamemath\n.+gamenum-подробная информация об игре Ряд чисел")
+        .setFooter("Модуль:Games Helper bot 2018 ©")
         .setColor(embedColor.color)
         .setThumbnail("http://aarp.cdn.arkadiumhosted.com/4.0-aarp/Content/Images/default/600x600_gameicon.jpg")        
-        message.channel.sendEmbed(embed);
+        message.channel.send(embed);
     }
 });
+
 
 bot.on("message", async message => {
     if(message.author.bot) return;
@@ -328,7 +331,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if (message.content == ".+gamenum") {
+    if (message.content == "++gamenum") {
         var embed = new Discord.RichEmbed()
         .setTitle("Игра случайное число.")
         .setDescription("Бот будет давать случайное число.Вам нужно будет продолжить ряд,по его типу, т.е если число чётное-значит и ряд будет чётным,тоже самой и с нечётным числом.")
@@ -353,7 +356,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if (message.content == ".+rules") {
+    if (message.content == "++rules") {
         var embed = new Discord.RichEmbed()
         .setTitle("```Правила нашего сервера```")
         .setDescription("```ЗАПРЕЩЕНО:\n1.Оскорбления,мат,завуалированный мат.\n2.Выяснение отношений (кто прав,кто нет,кто хороший,а кто плохой и т.д).\n3.Спамить,флудить,бессмысленная и не носящая толка информация.(Исключением является чат #spam, но не злоупотреблять.)\n4.Рекламные сообщения:приглашения на сервер, ссылки на сторонние источники и т.п\n5.Давать команды ботам,кроме #commands\n6.Капс(писать заглавными буквами).\n7.Просьба о помощи в игре и т.д.  Для этого есть система личных сообщений.\n8.Злоупотреблять командами ботов.\n9.Плагиатить других участников сервера.\n10.Неуважение к Администрации. Обсуждение действий Администрации и Модераторов.```")
@@ -368,7 +371,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if (message.content == ".+rules") {
+    if (message.content == "++rules") {
         message.channel.sendMessage(message.author.toString() + ",проверь свои личные сообщения! :wink: ");
     }
 });
@@ -377,7 +380,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if (message.content == ".+roles") {
+    if (message.content == "++roles") {
         var embed = new Discord.RichEmbed()
         .setTitle("Роли нашего сервера")
         .setDescription("```1.Гость. Автоматически выдаётся ботом.\n2.Посетитель. Выдаётся проявляющим активность участникам\n3.BOTS. Выдаётся соответственно только ботам\n4.Group  🔑. Выдаётся определенным участникам (Не выпрашивать!)\n5.Girl. Выдаётся участникам,которые являются представителями женского пола\n6. Moderator. Модераторы\n7.Admin. Администратор сервера.\n8.Deputy Owner. Заместитель владельца.\n9.Active Member 🏆(Активный участник). Выдаётся автоматически ботом за 25 уровень\n10.Watching(Наблюдение). Наблюдающие за чистотой и порядком сервера```")
@@ -392,12 +395,12 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if (message.content == ".+roles") {
+    if (message.content == "++roles") {
         message.channel.sendMessage(message.author.toString() + ",чекни ЛС :wink: ");
     }
 });
 
-var usage = "`.+hangman <ID канала> <ваша фраза>`\n`Пример: .+hangman 368845035560763402 Пирожки`";
+var usage = "`++hangman <ID канала> <ваша фраза>`\n`Пример: ++hangman 368845035560763402 pelmeni
 var letters = ["🇦", "🇧", "🇨", "🇩", "🇪", "🇫", "🇬", "🇭", "🇮", "🇯", "🇰", "🇱", "🇲", "🇳", "🇴", "🇵", "🇶", "🇷", "🇸", "🇹", "🇺", "🇻", "🇼", "🇽", "🇾", "🇿"];
 var unicode = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -789,5 +792,43 @@ if(filter.some(word => message.content.match(word)) ) {
 }
 })
 
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+    if(message.content.startsWith(`++mcmds`)) {
+        let messageArray = message.content.split(" ");
+        let args = messageArray.slice(1);
+        var findcmds = args[0];
+        if(!findcmds) return message.reply("Вы не указали названия модуля")
+        var embed = new Discord.RichEmbed(cmds[findcmds])
+        .setColor(0x0ffff)
+        try {
+            message.channel.send(embed) 
+        } catch (error) {
+            console.error("Error!O,o")
+            message.channel.send("Данная команда не наёдена")
+        }
+    }
+})
+
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+    if(message.content.startsWith(`++cmd`)){
+        let messageArray = message.content.split(" ");
+        let args = messageArray.slice(1);
+        var findcmd = args[0];
+        if(!findcmd) return message.reply("укажите название команды.")
+        var embed = new Discord.RichEmbed(cmd[findcmd])
+        .setColor(0x0ffff)
+        try {
+            message.channel.send(embed) 
+        } catch (error) {
+            console.error("Error!O,o")
+            message.channel.send("Данная команда не наёдена")
+        }
+        
+    } 
+})
 
 bot.login(process.env.TOKEN);
