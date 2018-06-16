@@ -1,0 +1,290 @@
+{
+    "mute": {
+        "title": "++mute",
+        "description": "Выдаёт запрет на общение указанному участнику сервера.",
+        "footer": {
+          "text": "Модуль:Moderation"
+        },
+        "fields": [
+          {
+            "name": "Использование",
+            "value": "`++mute @User неадекватное поведение (причина необязательна)`",
+            "inline": false
+          },
+          {
+            "name": "Требования",
+            "value": "<@&414530081189265416>",
+            "inline": false
+          }
+        ]
+        },
+        "unmute": {
+          "title": "++unmute",
+          "description": "Снимает запрет на общение указанному участнику сервера.",
+          "footer": {
+            "text": "Модуль:Moderation"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++unmute @User причина (причина необязательна)`",
+              "inline": false
+            },
+            {
+              "name": "Требования",
+              "value": "<@&414530081189265416>",
+              "inline": false
+            }
+          ]
+        },
+        "tempmute": {
+            "title": "++tempmute",
+            "description": "Выдаёт временный запрет на общение указанному участнику сервера.",
+            "footer": {
+              "text": "Модуль:Moderation"
+            },
+            "fields": [
+              {
+                "name": "Использование",
+                "value": "`++tempmute @User <время(s,m,d,w,y)> причина (причина необязательна)`",
+                "inline": false
+              },
+              {
+                "name": "Требования",
+                "value": "<@&414530081189265416>",
+                "inline": false
+              }
+            ]
+        },
+        "del": {
+          "title": "++del",
+            "description": "Удаляет указанное количество сообщений.",
+            "footer": {
+              "text": "Модуль:Moderation"
+            },
+            "fields": [
+              {
+                "name": "Использование",
+                "value": "`++del 20 (до 100 сообщений за 1 раз)`",
+                "inline": false
+              },
+              {
+                "name": "Требования",
+                "value": "<@&414530081189265416>",
+                "inline": false
+              }
+            ]
+        },
+        "say": {
+          "title": "++say",
+            "description": "Отправляет сообщение,которое Вы написали.",
+            "footer": {
+              "text": "Модуль:Owner"
+            },
+            "fields": [
+              {
+                "name": "Использование",
+                "value": "`++say Всем привет`",
+                "inline": false
+              },
+              {
+                "name": "Требования",
+                "value": "Владелец бота",
+                "inline": false
+              }
+            ]
+        },
+        "msay": {
+          "title": "++msay",
+            "description": "Отправляет сообщение,которое Вы написали методом встраивания.",
+            "footer": {
+              "text": "Модуль:Owner"
+            },
+            "fields": [
+              {
+                "name": "Использование",
+                "value": "`++msay Всем привет`",
+                "inline": false
+              },
+              {
+                "name": "Требования",
+                "value": "Владелец бота",
+                "inline": false
+              }
+            ]
+        },
+        "rall": {
+          "title": "++msay",
+            "description": "Включает смену цветов указанных ролей с заданным интервалом.",
+            "footer": {
+              "text": "Модуль:Owner"
+            },
+            "fields": [
+              {
+                "name": "Использование",
+                "value": "`++rall 1Роль;2Роль;3Роль 5000`",
+                "inline": false
+              },
+              {
+                "name": "Требования",
+                "value": "Владелец бота",
+                "inline": false
+              }
+            ]
+        },
+        "gamemath": {
+          "title": "++gamemath",
+          "description": "Информация об игре в вычисление.",
+          "footer": {
+            "text": "Модуль:Games"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++gamemath`",
+              "inline": false
+            }
+          ]
+        },
+        "primer": {
+          "title": "++primer",
+          "description": "Математический пример.",
+          "footer": {
+            "text": "Модуль:Games"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++primer`",
+              "inline": false
+            }
+          ]
+        },
+        "gameword": {
+          "title": "++primer",
+          "description": "Информация об игре в слово.",
+          "footer": {
+            "text": "Модуль:Games"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++gameword`",
+              "inline": false
+            }
+          ]
+        },
+        "gamenum": {
+          "title": "++gamenum",
+          "description": "Информация об игре в цифры.",
+          "footer": {
+            "text": "Модуль:Games"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++gamenum`",
+              "inline": false
+            }
+          ]
+        },
+        "game": {
+          "title": "++gamenum",
+          "description": "Общая информация об играх.",
+          "footer": {
+            "text": "Модуль:Games"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++game`",
+              "inline": false
+            }
+          ]
+        },
+        "cmd": {
+          "title": "++cmd",
+          "description": "Информация о команде.",
+          "footer": {
+            "text": "Модуль:Help"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++cmd <имя команды>`",
+              "inline": false
+            }
+          ]
+        },
+        "mcmds": {
+          "title": "++mcmds",
+          "description": "Список команд указанного модуля.",
+          "footer": {
+            "text": "Модуль:Help"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++mcmds help`",
+              "inline": false
+            }
+          ]
+        },
+        "help": {
+          "title": "++help",
+          "description": "Список команд для помощи.",
+          "footer": {
+            "text": "Модуль:Help"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++help`",
+              "inline": false
+            }
+          ]
+        },
+        "mdls": {
+          "title": "++help",
+          "description": "Список модулей.",
+          "footer": {
+            "text": "Модуль:Help"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++mdls`",
+              "inline": false
+            }
+          ]
+        },
+        "rcat": {
+          "title": "++rcat",
+          "description": "Случайное изображение кошки.",
+          "footer": {
+            "text": "Модуль:Utility"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++rcat`",
+              "inline": false
+            }
+          ]
+        },
+        "rdog": {
+          "title": "++rdog",
+          "description": "Случайное изображение собаки.",
+          "footer": {
+            "text": "Модуль:Utility"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++rdog`",
+              "inline": false
+            }
+          ]
+        }
+
+    }
