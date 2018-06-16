@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     .setDescription("```ini\n++cmd [имя_команды]\n++mcmds [имя_модуля]\n++mdls [список_модулей]```")
     .setColor(0x0ffff)
     .setFooter("Helper bot ©2018")
-    message.channel.sendEmbed(embed);
+    message.channel.send(embed);
 };
 
 module.exports.help = {
