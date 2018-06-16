@@ -1,0 +1,32 @@
+{
+    "owner": {
+            "description": "```yaml\n•++say\n•++msay\n•++rall\n```",
+            "footer": {
+              "text": "Модуль:Owner"
+            }
+          },
+          "moderation": {
+            "description": "```yaml\n•++mute\n•++unmute\n•++tempmute\n•++del\n```",
+            "footer": {
+              "text": "Модуль:Moderation"
+            }
+          },
+          "games": {
+            "description": "```yaml\n•++gamemath\n•++primer\n•++gamenum\n•++gameword\n•++game\n```",
+            "footer": {
+              "text": "Модуль:Games"
+            }
+          },
+          "help": {
+            "description": "```yaml\n•++help\n•++cmd\n•++mcmds\n•++mdls\n```",
+            "footer": {
+              "text": "Модуль:Help"
+            }
+          },
+          "utility": {
+            "description": "```yaml\n•++rcat\n•++rdog\n•++urb\n```",
+            "footer": {
+              "text": "Модуль:Utility"
+            }
+          }
+    }
