@@ -22,10 +22,6 @@ module.exports.run = async (bot, message, args) => {
           .then(tRole.edit({color: ctRole[cctRoler]}))
           .then(dRole.edit({color: cdRole[ccdRoler]}))
           .then(rdRole.edit({color: crdRole[ccrdRoler]}))
-          .then(rdRole.edit({color: crdRole[ccrdRoler]}))
-          .then(dRole.edit({color: cdRole[ccdRoler]}))
-          .then(tRole.edit({color: ctRole[cctRoler]}))
-          .then(aRole.edit({color: cArole[cAroler]}))
           .catch(e => {
             return message.channel.sendMessage("Произошла ошибка,зайдите в консоль.");
           });
