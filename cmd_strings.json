@@ -285,6 +285,20 @@
               "inline": false
             }
           ]
+        },
+        "inlb": {
+          "title": "++inlb",
+          "description": "Таблица лидеров по приглашениям на сервер.",
+          "footer": {
+            "text": "Модуль:Utility"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++inlb`",
+              "inline": false
+            }
+          ]
         }
 
     }
