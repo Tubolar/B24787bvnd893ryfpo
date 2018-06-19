@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     let zR = message.guild.roles.find('name', "ZONTIk")
     if(message.member.roles.has(zR.id)){
         u.send(msg).then(message.channel.send("Сообщение отправлено"))
-    } else message.channel.send("у Вас недостаточно прав").then(sent => sent(delete(10000))).then(message.delete(5000))
+    } else message.channel.send("у Вас недостаточно прав")
 }
 
 module.exports.help = {
