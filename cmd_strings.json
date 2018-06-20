@@ -299,6 +299,20 @@
               "inline": false
             }
           ]
+        },
+    "me": {
+          "title": "me",
+          "description": "Показывает некоторую информацию о Вас.",
+          "footer": {
+            "text": "Модуль:Utility"
+          },
+          "fields": [
+            {
+              "name": "Использование",
+              "value": "`++me`",
+              "inline": false
+            }
+          ]
         }
 
     }
