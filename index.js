@@ -772,6 +772,7 @@ if(filter.some(word => message.content.match(word)) ) {
 bot.on("message", async message => {
 	if(message.channel.type === "dm") return;
         if(message.author.bot) return;
+	if(message.author.id == "336807875605168128") return;
 const enBadw = [/fack/i, /fuuck/i, /cock/i, /tits/i, /bitc/i, /fuck/i, /gay/i, /sucker/i, /hick/i, /pussy/i, /bich/i, /stup/i, /dick/i, /penis/i, /prosti/i,/tart/i, /fuc/i, /noob/i, /fck/i, /schmuck/i, /paddel/i, /cur/i, /autism/i, /chmo/i, /eb/i, /sosi/i, /xu/i, /nyb/i, /xyesos/i, /lox/i, /typo/i, /sex/i, /секас/i, /секс/i, /sekas/i, /gom/i, /gnid/i, /piska/i, /sis/i, /bomz/i, /boln/i, /aytist/i, /dayn/i, /loh/i, /swinia/i, /plun/i];
 
 const Role = message.guild.roles.find(`name`, 'Mute')
@@ -783,7 +784,9 @@ if(enBadw.some(word => message.content.match(word)) ) {
 });
 
 bot.on("message", async message => {
+	if(message.channel.type === "dm") return;
     if(message.author.bot) return;
+	if(message.author.id == "336807875605168128") return;
 const filter = [/а/i, /б/i, /в/i, /г/i, /д/i, /е/i, /ё/i, /ж/i, /з/i, /и/i, /й/i, /к/i, /л/i, /м/i, /н/i, /о/i, /п/i, /р/i, /с/i, /т/i, /у/i, /ф/i, /х/i, /ц/i, /ч/i, /ш/i, /щ/i, /ъ/i, /ы/i, /ь/i, /э/i, /ю/i, /я/i]
 if(message.channel.id == '414534158761852938') {
 if(filter.some(word => message.content.match(word)) ) {
