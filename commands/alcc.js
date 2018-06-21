@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
         let colres = Math.floor((Math.random() * colors.length)); 
         roles.forEach((role) => {
             let aRole = message.guild.roles.find('name', "Admin")
-            let tRole = message.guild.roles.find("name", "Элита");
+            let tRole = message.guild.roles.find("name", "Elite");
             let dRole = message.guild.roles.find("name", "Посетитель");
             let rdRole = message.guild.roles.find("name", "Гость");
             let cArole = ["#080707", "#080707", "#080707", "#310125", "#191f20"];
