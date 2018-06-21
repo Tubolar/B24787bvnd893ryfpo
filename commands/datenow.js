@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
-message.channel.send(new Date())
+    var date = new Date(message.createdAt)
+message.channel.send(`${date} time`)
 }
 
 module.exports.help = {
