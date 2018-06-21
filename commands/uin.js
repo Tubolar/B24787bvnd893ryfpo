@@ -58,7 +58,7 @@ module.exports.run = async (bot, message, args) => {
     builder.addField("Статус игры", `${message.member.user.presence.game ? `${message.member.user.presence.game.name}` : "Игры не обнаружено."}`)
     builder.setColor(0x0ffff)
     
-    message.channel.send({embed: builder}).then(msg => msg.delete(10000)).then(message.delete(10000))
+    message.channel.send({embed: builder}).then(msg => msg.delete(20000)).then(message.delete(20000))
 }
 module.exports.help = {
     name: "me"
