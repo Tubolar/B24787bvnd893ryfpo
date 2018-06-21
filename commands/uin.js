@@ -44,7 +44,7 @@ module.exports.run = async (bot, message, args) => {
         online: "Онлайн",
         dnd: "Не беспокоить",
         idle: "Не активен",
-        invisible: "Не в сети"
+        offline: "Не в сети"
     }
 
     let uicon = message.author.displayAvatarURL
