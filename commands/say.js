@@ -15,6 +15,7 @@ module.exports.run = async (bot, message, args) => {
     let modRole = message.guild.roles.find("name", "ZONTIk");
         if(message.member.roles.has(modRole.id)) {
         message.channel.send(botmessage)
+            console.log(botmessage)
         } else {
          message.channel.send(erEmbed)
         }
