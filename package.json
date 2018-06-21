@@ -4,11 +4,14 @@
   "description": "The bot is helper",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm install mathjs"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Me",
   "license": "ISC",
   "dependencies": {
+    "mathjs": "^5.0.0",
+    "array-sort": "^1.0.0",
+    "weather-js": "^2.0.0",
     "discord.js": "^11.3.2",
     "superagent": "^3.8.2"
   }
