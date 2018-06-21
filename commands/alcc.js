@@ -19,10 +19,10 @@ module.exports.run = async (bot, message, args) => {
             let ccdRoler = Math.floor((Math.random() * cdRole.length)); 
             let ccrdRoler = Math.floor((Math.random() * crdRole.length)); 
             let cAroler = Math.floor((Math.random() * cArole.length))
-            aRole.edit({color: cArole[cAroler]})
-            .then(tRole.edit({color: ctRole[cctRoler]}))
-            .then(dRole.edit({color: cdRole[ccdRoler]}))
-            .then(rdRole.edit({color: crdRole[ccrdRoler]}))
+              aRole.edit({color: cArole[cAroler]})
+          .then(tRole.edit({color: ctRole[cctRoler]}))
+          .then(dRole.edit({color: cdRole[ccdRoler]}))
+          .then(rdRole.edit({color: crdRole[ccrdRoler]}))
           .catch(e => {
             return message.channel.sendMessage("Произошла ошибка,зайдите в консоль.");
           });
