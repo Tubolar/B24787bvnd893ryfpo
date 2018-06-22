@@ -383,7 +383,7 @@ bot.on("message", async message => {
     if (message.content == "++roles") {
         var embed = new Discord.RichEmbed()
         .setTitle("Роли нашего сервера ")
-        .setDescription("```•Гость-выдаётся новым участникам\nПосетитель-выдаётся за проявление актива.\nModerator-следящие за порядком на сервере.```")
+        .setDescription("```•Гость-выдаётся новым участникам\n•Посетитель-выдаётся за проявление актива.\n•Moderator-следящие за порядком на сервере.```")
         .setFooter("Администрация TOP-GAMERS")
         .setColor(0x60000c)
         .setThumbnail("http://roles.com.br/wp-content/uploads/2014/02/Roles-Logo-Home.png")
