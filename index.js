@@ -382,12 +382,12 @@ bot.on("message", async message => {
 
     if (message.content == "++roles") {
         var embed = new Discord.RichEmbed()
-        .setTitle("Роли нашего сервера <:051:417764221418340352>")
-        .setDescription("```•Гость-выдаётся новым участникам\nПосетитель-выдаётся за проявление актива.\nMoerator-следящие за порядком на сервере.```")
+        .setTitle("Роли нашего сервера ")
+        .setDescription("```•Гость-выдаётся новым участникам\nПосетитель-выдаётся за проявление актива.\nModerator-следящие за порядком на сервере.```")
         .setFooter("Администрация TOP-GAMERS")
-        .setColor(0x40ff00)
+        .setColor(0x60000c)
         .setThumbnail("http://roles.com.br/wp-content/uploads/2014/02/Roles-Logo-Home.png")
-       message.author.sendEmbed(embed);
+       message.author.sendEmbed(embed)
     }
 });
 
@@ -396,7 +396,7 @@ bot.on("message", async message => {
     if(message.channel.type === "dm") return;
 
     if (message.content == "++roles") {
-        message.channel.sendMessage(message.author.toString() + ",чекни ЛС :wink: ");
+        message.channel.sendMessage(message.author.toString() + ",чекни ЛС <:051:417764221418340352> ");
     }
 });
 
