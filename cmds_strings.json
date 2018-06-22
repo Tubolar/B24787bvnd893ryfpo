@@ -1,30 +1,35 @@
 {
     "owner": {
-            "description": "```yaml\n•++say\n•++msay\n•++rall\n```",
+            "title": "Owner cmds",
+            "description": "```yaml\n•++say\n•++msay\n•++rall```",
             "footer": {
               "text": "Модуль:Owner"
             }
           },
           "moderation": {
-            "description": "```yaml\n•++mute\n•++unmute\n•++tempmute\n•++del\n```",
+              "title": "Moderation cmds",
+            "description": "```yaml\n•++mute\n•++unmute\n•++tempmute\n•++del```",
             "footer": {
               "text": "Модуль:Moderation"
             }
           },
           "games": {
-            "description": "```yaml\n•++gamemath\n•++primer\n•++gamenum\n•++gameword\n•++game\n```",
+             "title": "Games cmds",
+            "description": "```yaml\n•++gamemath\n•++primer\n•++gamenum\n•++gameword\n•++game```",
             "footer": {
               "text": "Модуль:Games"
             }
           },
           "help": {
-            "description": "```yaml\n•++help\n•++cmd\n•++mcmds\n•++mdls\n```",
+              "title": "Help cmds",
+            "description": "```yaml\n•++help\n•++cmd\n•++mcmds\n•++mdls```",
             "footer": {
               "text": "Модуль:Help"
             }
           },
           "utility": {
-            "description": "```yaml  \n•++rcat  \n•++rdog  \n•++urb  \n```",
+              "title": "Utility cmds",
+            "description": "```yaml\n•++rcat\n•++rdog\n•++urb```",
             "footer": {
               "text": "Модуль:Utility"
             }
