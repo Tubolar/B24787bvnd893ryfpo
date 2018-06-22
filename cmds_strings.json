@@ -24,7 +24,7 @@
             }
           },
           "utility": {
-            "description": "```yaml\n•++rcat\n•++rdog\n•++urb\n```",
+            "description": "```yaml  \n•++rcat  \n•++rdog  \n•++urb  \n```",
             "footer": {
               "text": "Модуль:Utility"
             }
