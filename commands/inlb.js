@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
         strings.push([inlb.inviter.username, inlb.uses]);
         var builder = new Discord.RichEmbed()
         builder.setTitle("Таблица приглашений")
-        builder.setDescription(table.table(strings))
+        builder.setDescription("```\nbash" + table.table(strings) + "\n```")
         builder.setColor(0x0ffff);
         message.channel.send({embed: builder})
     })
