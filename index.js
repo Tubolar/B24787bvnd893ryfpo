@@ -396,7 +396,8 @@ bot.on("message", async message => {
     if(message.channel.type === "dm") return;
 
     if (message.content == "++roles") {
-        message.channel.sendMessage(message.author.toString() + ",чекни ЛС <:051:417764221418340352> ");
+	    var emoji = message.guild.emojis.find('name', "051")
+        message.channel.sendMessage(message.author.toString() + `,чекни ЛС ${emoji}`);
     }
 });
 
