@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
       let int = args[0]
    var embed = new Discord.RichEmbed()
    .setTitle("Смена цветов")
-   .setDescription("**Частота смены цвета:**" + "`" + int + "`"
+   .setDescription("**Частота смены цвета:**" + "`" + int + "`")
   message.channel.send(embed)
     if(message.member.roles.has(modRole.id)) {
         let intr = args[0]
