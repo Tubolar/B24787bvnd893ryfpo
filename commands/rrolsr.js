@@ -7,8 +7,8 @@ module.exports.run = async (bot, message, args) => {
     function cRole() {
         let random = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
         roles.forEach((role) => {
-        let role = message.guild.roles.find('name', "Rainbow")
-            role.edit({color: random})
+        let Rrole = message.guild.roles.find('name', "Rainbow")
+            Rrole.edit({color: random})
           .catch(e => {
             return message.channel.sendMessage("Произошла ошибка,зайдите в консоль.");
           });
