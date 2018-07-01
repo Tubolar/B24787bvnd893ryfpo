@@ -48,7 +48,8 @@ module.exports.run = async (bot, message, args) => {
     }
 
     let uicon = message.author.displayAvatarURL
-    var builder = new Discord.RichEmbed()
+    var builder = new Discord.RichEmbed({
+     color: message.member.highestRole.color})
     builder.setAuthor(message.author.username, uicon)
     builder.setImage(uicon)
     builder.setThumbnail(uicon)
@@ -56,7 +57,6 @@ module.exports.run = async (bot, message, args) => {
     builder.addField("Приглашён", `${strings_days[D]}/${strings_months[M]}/${Y}/${T}`)
     builder.addField("Статус", `${status[message.member.user.presence.status]}`)
     builder.addField("Статус игры", `${message.member.user.presence.game ? `${message.member.user.presence.game.name}` : "Игры не обнаружено."}`)
-    builder.setColor(0x0ffff)
     
     message.channel.send({embed: builder}).then(msg => msg.delete(20000)).then(message.delete(20000))
 }
