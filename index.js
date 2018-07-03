@@ -863,4 +863,15 @@ bot.on("guildMemberRemove", async member => {
   sChannel.send(lEmbed)
 })
 
+bot.on("message", async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+	if(message.content.startsWith("Я тестер")) {
+        let tRole = message.guild.roles.find('name', "Tester")
+        if(message.member.roles.has(tRole.id)) return message.channel.send('Вы уже имеете данную роль.')
+        if(!message.member.roles.has(tRole.id)) {
+            message.member.addRole(tRole.id).then(message.channel.send(embed = new Discord.RichEmbed().setTitle(":ok:")))
+        }
+	} 
+})
 bot.login(process.env.TOKEN);
