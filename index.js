@@ -835,4 +835,30 @@ bot.on("message", async message => {
     } 
 })
 
+bot.on("guildMemberAdd", async member => {
+
+    let ES8 = bot.emojis.find('name', "ES8")
+    let ES11 = bot.emojis.find('name', "ES11")
+    let channel = member.guild.channels.find('name', "instructions")
+    var wEmbed = new Discord.RichEmbed()
+    wEmbed.setTitle(`Новый участник! ${ES8}`)
+    wEmbed.setDescription(`Эй ${member},добро пожаловать на сервер TOP-GAMERS.`)
+    wEmbed.addField(`Дополнительная информация ${ES11}`, "Обязательно прочитай правила в канале <#414531689151332366>,чтобы избежать проблем в дальнейшем.")
+    wEmbed.setFooter("Группа TOP-GAMERS")
+    wEmbed.setThumbnail("https://cdn.discordapp.com/icons/414528524943228928/832c18e030aec2e667e1a22bb01e3ae7.jpg")
+    wEmbed.setColor(0x0891c9e)
+    channel.send(wEmbed)
+})
+
+bot.on("guildMemberRemove", async member => {
+    var ES6 = bot.emojis.find('name', "ES6")
+    let sChannel = bot.channels.find('name', "spam")
+  var lEmbed = new Discord.RichEmbed()
+  lEmbed.setTitle(`Участник покинул сервер ${ES6}`)
+  lEmbed.setDescription(`Желаем удачи ${member} :wave:\nПока-пока.`)
+  lEmbed.setColor(0x050505)
+  lEmbed.setFooter("Группа TOP-GAMERS")
+  sChannel.send(lEmbed)
+})
+
 bot.login(process.env.TOKEN);
