@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
     let user = message.mentions.users.first() || message.author;
-    if(!user) return message.reply(",не могу найти участника");
+    if(!user) return message.reply("ну могу найти участника.")
 
     var embed = new Discord.RichEmbed()
     .setImage(user.displayAvatarURL)
