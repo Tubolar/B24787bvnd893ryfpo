@@ -24,11 +24,11 @@ module.exports.run = async (bot, message, args) => {
       });
     }
     message.member.setNickname(newn) 
-    message.channel.send(message.author + ",Ваш ник успешно изменён")
+    message.channel.send(message.author + ",Ваш ник успешно изменён.)
 }
  
     message.member.setNickname(newn)
-    message.channel.send(message.author + ",Ваш ник успешно изменён")
+    message.channel.send(message.author + ",Ваш ник успешно изменён.
 }
 
 module.exports.help = {
