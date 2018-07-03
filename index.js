@@ -732,6 +732,7 @@ bot.on("message", async message => {
         if(message.author.bot) return;
 	if(message.author.id == "336807875605168128") return;
 const siteWords = ["http://", "https://"];
+	if(message.content.match(/http://wormax.io/i)) return;
 const Role = message.guild.roles.find(`name`, 'Mute')
 if(siteWords.some(word => message.content.match(word)) ) {
   message.member.addRole(Role)
