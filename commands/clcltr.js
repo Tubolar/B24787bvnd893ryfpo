@@ -19,7 +19,7 @@ module.exports.run = (bot, message, args) => {
 
     var embed = new Discord.RichEmbed()
         .setAuthor(message.author.username, message.author.displayAvatarURL)
-        .setColor(message.author.color)
+        .setColor(message.member.displayHexColor)
         .addField("Исходный", "```bash\n" + primer + "\n```")
         .addField("Вывод", "```bash\n" + result + "\n```")
 
