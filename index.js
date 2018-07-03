@@ -847,7 +847,8 @@ bot.on("guildMemberAdd", async member => {
     wEmbed.setFooter("Группа TOP-GAMERS")
     wEmbed.setThumbnail("https://cdn.discordapp.com/icons/414528524943228928/832c18e030aec2e667e1a22bb01e3ae7.jpg")
     wEmbed.setColor(0x0891c9e)
-    channel.send(wEmbed)
+    channel.send(wEmbed).then(embed => embed.delete(60000))
+    channel.send(`${member}.`).then(sent => sent.delete())
 })
 
 bot.on("guildMemberRemove", async member => {
