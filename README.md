@@ -1,8 +1,16 @@
-# K327783
-TBTHBOTR327783.
+**WARNING**
 
-All rights reserved
+Вы не в праве использовать данный материал в коммерческих целях.
 
-K327783 ©2018
+При **изменении,преобразовании,использованием,как основу для своего материала** данного кода,Вы не в праве распространять изменёный материал. Данный бот специально написан для сервера [TOP-GAMERS](https://discord.io/TOPGAMERS) в Discord.
 
-This bot is **not** public, it is **specially** created for a particular server.
+
+Использовать в частичной или в полной мере данный материал позволено **только** на некоммерческих целях,после разрешения автора данного материала.
+
+Copyright 2018 © [Helperbot](https://discord.io/TOPGAMERS)(чтобы перейти на Discord сервер,нажмите на Helperbot)
+
+Все права защищены.
+Нарушение авторских прав наказуемо.
+
+CC BY-NC-ND
+https://creativecommons.org/licenses/by-nc-nd/4.0/
