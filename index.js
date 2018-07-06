@@ -619,6 +619,13 @@ bot.on("guildMemberAdd", async member => {
     wEmbed.setColor(0x0891c9e)
     channel.send(wEmbed).then(embed => embed.delete(60000))
     channel.send(`${member}.`).then(sent => sent.delete())
+	var mEmbed = new Discord.RichEmbed()
+    .setAuthor(member.user.username, member.user.displayAvatarURL)
+    .setTitle("Доступ к некоторым голосовым и текстовым каналам")
+    .setDescription("Чтобы получить право отправлять сообщения на сервере,Вам необходимо иметь подтверждёный телефон своей учётной записи Discord.\nПосле подтверждения телефона Вы получите право отправлять сообщения в канале <#462942047813500928>.")
+    .setColor(0x0891c9e)
+    .setFooter("Группа TOP-GAMERS", "https://cdn.discordapp.com/icons/414528524943228928/832c18e030aec2e667e1a22bb01e3ae7.jpg")
+    member.send(mEmbed)
 })
 
 bot.on("guildMemberRemove", async member => {
