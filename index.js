@@ -18,7 +18,7 @@ fs.readdir("./commands/", (err,files) =>{
 
 let jsfile = files.filter(f => f.split(".").pop() === "js")
 if(jsfile.length <= 0) {
-    console.log("Couldn't find commands");
+    console.log("Команды не были найдены.");
     return;
 }
 
@@ -52,34 +52,6 @@ bot.on("ready", () => {
     console.log('Бот готов');
 });
 
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Привет бот") {
-        message.channel.sendMessage("Здарова,как жизнь?");
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Бот,что делаешь?") {
-        message.channel.sendMessage("Подчиняюсь твоим командам");
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Бот,как дела") {
-        message.channel.sendMessage("Как сметана бела");
-    }
-});
-
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
@@ -96,34 +68,11 @@ bot.on("message", async message => {
     }
 });
 
-
-
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    if (message.content == "Бот,помоги") {
-        message.channel.sendMessage(message.author.toString() + ",мой префикс `.+`");
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Слово") {
-        var embed = new Discord.RichEmbed()
-        .addField("Количество букв", Math.floor(Math.random() * 12 + 1  ))
-        .setColor(embedColor.color)
-        message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == ".+faqActive") {
+    if (message.content == "++faqActive") {
         var embed = new Discord.RichEmbed()
         .setTitle("Роль Active Member 🏆")
         .setDescription("Автоматически выдаётся ботом за проявление активности.")
@@ -162,171 +111,6 @@ bot.on("message", async message => {
     }
 });
 
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Вычисление старт") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Укажите уровень сложности")
-        .setColor(embedColor.color)
-       message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Вычисление=лёгкий") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Уровень сложности=лёгкий")
-        .setColor(embedColor.color)
-       message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Вычисление=средний") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Уровень сложности=средний")
-        .setColor(embedColor.color)
-       message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-	
-    if (message.content == "Вычисление=сложный") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Уровень сложности=сложный")
-        .setColor(embedColor.color)
-       message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Вычисление=максимальный") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Уровень сложности=максимальный")
-        .setColor(embedColor.color)
-       message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Вычисление=экстерн") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Уровень сложности=экстерн")
-        .setColor(embedColor.color)
-       message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Пример=лёгкий") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Уровень=лёгкий")
-        .addField("Число", Math.floor(Math.random() * 12 + 1  ))
-        .addField("Отнять", Math.floor(Math.random() * 16 + 1  ))
-        .addField("Умножить на", Math.floor(Math.random() * 20 + 1  ))
-        .addField("Разделить на", Math.floor(Math.random() * 8 + 1  ))
-        .addField("Прибавить", Math.floor(Math.random() * 10 + 1  ))
-        .setColor(embedColor.color)
-        message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Пример=средний") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Уровень=средний")
-        .addField("Число", Math.floor(Math.random() * 24 + 1  ))
-        .addField("Прибавить", Math.floor(Math.random() * 32 + 1  ))
-        .addField("Умножить на", Math.floor(Math.random() * 40 + 1  ))
-        .addField("Разделить на", Math.floor(Math.random() * 10 + 1  ))
-        .addField("Отнять", Math.floor(Math.random() * 20 + 1  ))
-        .setColor(embedColor.color)
-        message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Пример=сложный") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Уровень=сложный")
-        .addField("Число", Math.floor(Math.random() * 48 + 1  ))
-        .addField("Отнять", Math.floor(Math.random() * 64 + 1  ))
-        .addField("Умножить на", Math.floor(Math.random() * 80 + 1  ))
-        .addField("Разделить на", Math.floor(Math.random() * 40 + 1  ))
-        .addField("Прибавить", Math.floor(Math.random() * 30 + 1  ))
-        .setColor(embedColor.color)
-        message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Пример=максимальный") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Уровень=максимальный")
-        .addField("Число", Math.floor(Math.random() * 620 + 1  ))
-        .addField("Отнять", Math.floor(Math.random() * 980 + 1  ))
-        .addField("Умножить на", Math.floor(Math.random() * 120 + 1  ))
-        .addField("Разделить на", Math.floor(Math.random() * 80 + 1  ))
-        .addField("Прибавить", Math.floor(Math.random() * 500 + 1  ))
-        .setColor(embedColor.color)
-        message.channel.sendEmbed(embed);
-    }
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    if (message.content == "Пример=экстерн") {
-        var embed = new Discord.RichEmbed()
-        .setTitle("Уровень=экстерн")
-        .addField("Число", Math.floor(Math.random() * 620 + 1  ))
-        .addField("Отнять", Math.floor(Math.random() * 980 + 1  ))
-        .addField("Умножить на", Math.floor(Math.random() * 120 + 1  ))
-        .addField("Разделить на", Math.floor(Math.random() * 80 + 1  ))
-        .addField("Прибавить", Math.floor(Math.random() * 500 + 1  ))
-        .addField("Умножить на", Math.floor(Math.random() * 14 + 1  ))
-        .addField("Отнять", Math.floor(Math.random() * 1000 + 1  ))
-        .addField("Прибавить", Math.floor(Math.random() * 10000 + 1  ))
-        .addField("Разделить на", Math.floor(Math.random() * 5 + 1  ))
-        .addField("Прибавить к полученному числу сумму следующих чисел", "Сумма чисел")
-        .addField("Число 1", Math.floor(Math.random() * 25000 + 1  ))
-        .addField("И число 2", Math.floor(Math.random() * 15000 + 1  ))
-        .setColor(embedColor.color)
-        message.channel.sendEmbed(embed);
-    }
-});
-
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
@@ -340,17 +124,7 @@ bot.on("message", async message => {
     }
 });
 
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
 
-    if (message.content == "Стартовое число") {
-        var embed = new Discord.RichEmbed()
-        .setDescription(Math.floor(Math.random() * 1500 + 1  ))
-        .setColor(embedColor.color)
-       message.channel.sendEmbed(embed);
-    }
-});
 
 bot.on("message", async message => {
     if(message.author.bot) return;
@@ -542,7 +316,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
 });
 
 bot.on('message', msg => {
-    if(msg.content.startsWith(".+hangman")) {
+    if(msg.content.startsWith("++hangman")) {
         var words = msg.content.split('\n')[0].split(' ');
         if(words.length < 2) {
             msg.reply(usage);
@@ -605,24 +379,6 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    let gamewords = ["аббревиатура", "аванс", "абсорбер", "авиация", "арбуз", "апельсин", "абстракция", "алоэ", "альтернатива", "амёба", "баловать", "барабан", "баскетбол", "бандит", "битва", "баталия", "батискаф", "банк","вакансия", "валюта","валентность", "вахтёр","влияние", "вата","вальс", "ванилин","вандализм", "варка","габариты", "гармония","Германия", "гитара","газ", "газель","Гватемала", "гармон","гениальность", "гильдия","гол", "город","гость", "гостеприимство","гель", "дыня","дача", "длина","длительность", "дар","двор", "дёготь","Дарвин", "деградация","деньги", "ЕС","ехидно", "ехать","Ессентуки", "ёрш","ёлка", "ёмкость","жаба", "жадность","жарка", "желток","железо", "жонглёр","замок", "зависть","злоба", "зной","зависимость", "зыбкость","завязывать", "идти","идол", "инкарнация","изгиб", "изготовление","изделие", "известь","йогурт", "камера","контроль", "кинетика","какао", "какаду","кабель", "лапша","Ролтон", "лекарство","лечение", "летать","лето", "Малайзия","мель", "мел","мощность", "маникюр","месть", "мелочь","мнение", "ночь","надзор", "национальность","наглость", "небрежность","надёжность", "обмен","оберег", "ободрить","окружность", "обгон","парашют", "пар","печень", "пари","пот", "печь","паразит", "прелесть","речь", "рестарт","реплика", "радиоактивность","роль", "рана","разбудить", "разговор","радость", "радуга","сайгак", "сероводород","ссылка", "совесть","счастье", "театр","трата", "темя","телятина", "творить","усталость", "уж","умение", "увеличение","уверенность", "уговор","фараон", "фея","фермент", "физика","фишка", "филе","хата", "хрен","хан", "ханство","холера", "хлорид","хломиномонада", "хобот","хомяк", "цапля","церковь", "уена","ценность", "цель","центр", "центрифуга","цех", "чечня","череп", "человек","честь", "честность","чек", "чемпион","шарф", "шалость","шея", "шов","шелест", "шип","шлем", "шлёп","штурм", "штурвал","щавель", "щёгол","щит", "щука","эвакуатор", "эвкалипт","энергия", "юла","юг", "юный","якорь", "ясность","яркость", "я","ящер",];
-    let resultword = Math.floor((Math.random() * gamewords.length));
-    let interval =  Math.floor(Math.random() * 5 + 1  )
-    
-    if(message.content.startsWith(".+start")){
-        let modRole = message.guild.roles.find("name", "Game_mod");
-        if(message.member.roles.has(modRole.id)) {
-        message.channel.send(`Пусть стартовым словом будет **${gamewords[resultword]}**`)
-        } else {
-            message.reply("У Вас недостаточно прав,обратитесь к **роли** ``Game_mod``")
-        }
-    };
-});
-
-bot.on("message", async message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
     if (message.content.match(/здаров/i)) 
     {
        message.react("👋")
@@ -634,7 +390,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    let byeresponse = ["Давай 👏", "Удачи", "Пока", "Всего-хорошего", "До завтра!",  message.author.username + ",спокойной ночи 💤 (если сейчас ночь)", "До встречи!"];
+    let byeresponse = ["Давай 👏", "Удачи", "Пока", "Всего-хорошего", "До завтра!", "До встречи!"];
     let byeresult = Math.floor((Math.random() * byeresponse.length)); 
 
     if (message.content.match(/всем пока/i)) 
@@ -647,7 +403,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    let byeresponse = ["Давай 👏", "Удачи", "Пока", "Всего-хорошего", "До завтра!",  message.author.username + ",спокойной ночи 💤 (если сейчас ночь)", "До встречи!"];
+    let byeresponse = ["Давай 👏", "Удачи", "Пока", "Всего-хорошего", "До завтра!", "До встречи!"];
     let byeresult = Math.floor((Math.random() * byeresponse.length)); 
 
     if (message.content.match(/пока всем/i)) 
