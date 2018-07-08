@@ -44,7 +44,7 @@ module.exports.run = async (bot, message, args) => {
                 else
                 builder.setTimestamp(new Date(builder_date[2]));
             }
-            let builder_fields = ctx.match(/{fieldt: ?(.*?) \+ value: ?(.*?)( \+ inline)?}/gi)
+            let builder_fields = ctx.match(/{fieldt: ?(.*?) \+ value: ?(.*?)( \+ true)?}/gi)
             if (builder_fields !== null) {
                 builder_fields.forEach((params) => {
                 if (params[1] == null || params[2] == null || typeof params[1] === "undefined" || typeof params[2] === "undefined") return message.reply("неправильная форма построения поля(field)");
