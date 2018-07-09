@@ -663,7 +663,7 @@ bot.on("message", message => {
         if(v.value == 25) msgs = 25
         if(!isNaN(msgs)) {
             db.add(`usersent_${message.author.id}`, 1)
-            message.channel.send(`Вы отправили ${msgs}!`)
+            message.channel.send(`Вы отправили ${msgs} сообщений!`)
         }
     })
 })
