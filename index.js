@@ -6,8 +6,7 @@ var bot = new Discord.Client();
 const cmds = require('./cmds_strings.json');
 const cmd = require('./cmd_strings.json');
 bot.commands = new Discord.Collection();
-const db = require("quick.db");
-db.createWebview('password', process.env.PORT);
+
 
 
 
@@ -653,19 +652,6 @@ bot.on("message", async message => {
             message.member.addRole(tRole.id).then(message.channel.send(embed = new Discord.RichEmbed().setTitle(":ok:")))
         }
 	} 
-})
-
-bot.on("message", message => {
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-    db.add(message.author.id, 1).then(v => {
-        let msgs;
-        if(v.value == 25) msgs = 25
-        if(!isNaN(msgs)) {
-            db.add(`usersent_${message.author.id}`, 1)
-            message.channel.send(`Вы отправили ${msgs} сообщений!`)
-        }
-    })
 })
 
 bot.login(process.env.TOKEN);
