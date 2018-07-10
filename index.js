@@ -49,7 +49,7 @@ bot.on("ready", () => {
     bot.user.setStatus('dnd')
     var servers = bot.guilds.array().map(g => g.name).join('.');
     var channel = bot.channels.get('448546642375868436');
-    channel.sendMessage("Бот `Helper` снова в сети");
+    channel.sendMessage("Бот `Helper` снова в сети.На " + servers + " сервере.");
     console.log('Бот готов');
 });
 
