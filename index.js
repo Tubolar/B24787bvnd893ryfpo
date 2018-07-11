@@ -633,7 +633,7 @@ bot.on("guildMemberAdd", async member => {
 
 bot.on("guildMemberRemove", async member => {
     var ES6 = bot.emojis.find('name', "ES6")
-    let sChannel = bot.channels.find('name', "spam")
+    let sChannel = bot.channels.find('name', "хлам")
   var lEmbed = new Discord.RichEmbed()
   lEmbed.setTitle(`Участник покинул сервер ${ES6}`)
   lEmbed.setDescription(`Желаем удачи ${member} :wave:\nПока-пока.`)
