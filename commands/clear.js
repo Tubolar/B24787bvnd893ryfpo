@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
  
 module.exports.run = async (bot, message, args) => {
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("не могу произвести данную операцию.");
     if(!args[0]) return message.reply("не могу произвести данную операцию");
 
     let modRole = message.guild.roles.find("name", "Moderator");
