@@ -15,6 +15,7 @@
     "weather-js": "^2.0.0",
     "discord.js": "^11.3.2",
     "quick.db": "^6.3.2",
+    "nodemon": "^1.18.2",
     "superagent": "^3.8.2"
   }
 }
