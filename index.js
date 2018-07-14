@@ -654,4 +654,22 @@ bot.on("message", async message => {
 	} 
 })
 
+bot.on("message", async message =>{
+    if(message.author.bot) return;
+    if(message.channel.type == "dm"){
+        try {
+            var logembed = new Discord.RichEmbed()
+            .setAuthor(message.author.username, message.author.displayAvatarURL)
+            .setTitle("Личное сообщение")
+            .setDescription(message.content)
+            .setTimestamp()
+            .setFooter("DM Logger")
+            .setColor("PURPLE")
+            var logs = bot.channels.find('name', "dmlogs")
+            logs.send(logembed)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+})
 bot.login(process.env.TOKEN);
