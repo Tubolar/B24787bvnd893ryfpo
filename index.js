@@ -627,7 +627,7 @@ bot.on("guildMemberAdd", async member => {
     var mEmbed = new Discord.RichEmbed()
     .setAuthor(member.user.username, member.user.displayAvatarURL)
     .addField("Доступ к некоторым голосовым и текстовым каналам", "Чтобы получить право отправлять сообщения на сервере,Вам необходимо иметь подтверждёный телефон своей учётной записи Discord.\nПосле подтверждения телефона Вы получите право отправлять сообщения в канале <#462942047813500928>.\nДалее следуйте интсрукциям,которые находятся в канале <#462943423830294540>." )
-    .addField("Access to some voice and text channels", "To get the right to send messages on the server, you need to have a confirmed phone number for your Discord account. \n After you confirm the phone, you will get the right to send messages in the channel <# 462942047813500928>. \ n Further follow the instructions that are in the channel <# 462943423830294540>." )
+    .addField("Access to some voice and text channels", "To get the right to send messages on the server, you need to have a confirmed phone number for your Discord account.\nAfter you confirm the phone, you will get the right to send messages in the channel <#462942047813500928>.\nFurther follow the instructions that are in the channel <#462943423830294540>." )
     .setColor(0x0891c9e)
     .setFooter("Группа TOP-GAMERS", "https://cdn.discordapp.com/icons/414528524943228928/832c18e030aec2e667e1a22bb01e3ae7.jpg")
     member.send(mEmbed)
