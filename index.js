@@ -341,7 +341,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     
-    if (message.content.match(/привет/i)) 
+    if (message.content.match(/пр?(.*?)т/i)) 
     {
         message.react("👋")
     };
@@ -358,7 +358,7 @@ bot.on("message", async message => {
     let rresult = Math.floor((Math.random() * rresponses.length));
 
     
-    if (message.content.match(/всем привет/i)) 
+    if (message.content.match(/всем пр?(.*?)т/i)) 
     {
        message.channel.send(rresponses[rresult]);
     };
