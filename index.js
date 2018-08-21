@@ -371,7 +371,7 @@ bot.on("message", async message => {
     let responses = ["Приветсвую тебя", "Добрый вечер!", "Здарова", "Привет,как дела?", "Как прошёл день?","Привет!", "Пока", ":wave:", "Ну привет", "Здравствуй", "Привет привет...Как твоё ничего?"];
     let result = Math.floor((Math.random() * responses.length));
 
-    if (message.content.match(/привет всем/i)) 
+    if (message.content.match(/пр(?(.*?))?т всем/i)) 
     {
        message.channel.send(responses[result]);
     };
