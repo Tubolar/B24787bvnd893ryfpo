@@ -692,8 +692,7 @@ bot.on('voiceStateUpdate', (oldMember, newMember) => {
 	   
 	if(voiceRoles.some(role => newMember.roles.has(role))) {
         return newMember.deleteRoles(role).then(newMember.addRole(dVoiceRole))
-}
-        newMember.addRole(dVoiceRole)
+	} else newMember.addRole(dVoiceRole)
     } 
     if(newUserChannel.id == process.env.Channel2) {
         if(newMember.roles.has(VoiceRole2)) return;
