@@ -688,7 +688,11 @@ bot.on('voiceStateUpdate', (oldMember, newMember) => {
     let BerlogaRole = process.env.BerlogaRole;
     if(oldUserChannel === undefined && newUserChannel !== undefined) {
     if(newUserChannel.id == process.env.Channel1) {
-        if(newMember.roles.has(dVoiceRole)) return;
+	const voiceRoles = [dVoiceRole, VoiceRole2, AFKrole, MusicRole1, MusicRole2, VIPRoomRole, SecretMusicRole, BerlogaRole];
+	   
+	if(voiceRoles.some(role => newMember.roles.has(role))) {
+        return newMember.deleteRoles(role).then(newMember.addRole(dVoiceRole))
+}
         newMember.addRole(dVoiceRole)
     } 
     if(newUserChannel.id == process.env.Channel2) {
