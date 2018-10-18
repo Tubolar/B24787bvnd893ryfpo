@@ -673,5 +673,106 @@ bot.on("message", async message =>{
             console.log(error)
         }
     }
-})
+});
+
+bot.on('voiceStateUpdate', (oldMember, newMember) => {
+    let newUserChannel = newMember.voiceChannel;
+    let oldUserChannel = oldMember.voiceChannel;
+    let dVoiceRole = process.env.dVoiceRole;
+    let VoiceRole2 = process.env.VoiceRole2;
+    let AFKrole = process.env.AFKrole;
+    let MusicRole1 = process.env.MusicRole1;
+    let MusicRole2 = process.env.MusicRole2;
+    let VIPRoomRole = process.env.VIPRoomRole;
+    let SecretMusicRole = process.env.SecretMusicRole;
+    let BerlogaRole = process.env.BerlogaRole;
+    if(oldUserChannel === undefined && newUserChannel !== undefined) {
+    if(newUserChannel.id == process.env.Channel1) {
+        if(newMember.roles.has(dVoiceRole)) return;
+        newMember.addRole(dVoiceRole)
+    } 
+    if(newUserChannel.id == process.env.Channel2) {
+        if(newMember.roles.has(VoiceRole2)) return;
+        newMember.addRole(VoiceRole2)
+    }
+
+    if(newUserChannel.id == process.env.Channel3 {
+        if(newMember.roles.has(AFKrole)) return;
+        newMember.addRole(AFKrole)
+    }
+
+    if(newUserChannel.id == process.env.Channel4) {
+        if(newMember.roles.has(MusicRole1)) return;
+        newMember.addRole(MusicRole1)
+    }
+    
+    if(newUserChannel.id == process.env.Channel5) {
+        if(newMember.roles.has(MusicRole2)) return;
+        newMember.addRole(MusicRole2)
+    }
+    
+    if(newUserChannel.id == process.env.Channel6) {
+        if(newMember.roles.has(VIPRoomRole)) return;
+        newMember.addRole(VIPRoomRole)
+    }
+
+    if(newUserChannel.id == process.env.Channel7) {
+        if(newMember.roles.has(SecretMusicRole)) return;
+        newMember.addRole(SecretMusicRole)
+    }
+
+    if(newUserChannel.id == process.env.Channel8) {
+        if(newMember.roles.has(BerlogaRole)) return;
+        newMember.addRole(BerlogaRole)
+    }
+
+
+
+
+
+    } else if(newUserChannel === undefined){
+  
+  if(oldUserChannel.id == process.env.Channel1) {
+    if(!oldMember.roles.has(dVoiceRole)) return;
+    oldMember.removeRole(dVoiceRole)
+  };
+
+  if(oldUserChannel.id == process.env.Channel2) {
+    if(!oldMember.roles.has(VoiceRole2)) return;
+    oldMember.removeRole(VoiceRole2)
+  };
+
+  if(oldUserChannel.id == process.env.Channel3) {
+    if(!oldMember.roles.has(AFKrole)) return;
+    oldMember.removeRole(AFKrole)
+  };
+
+  if(oldUserChannel.id == process.env.Channel4) {
+    if(!oldMember.roles.has(MusicRole1)) return;
+    oldMember.removeRole(MusicRole1)
+  };
+  
+  if(oldUserChannel.id == process.env.Channel5) {
+    if(!oldMember.roles.has(MusicRole2)) return;
+    oldMember.removeRole(MusicRole2)
+  };
+  
+  if(oldUserChannel.id == process.env.Channel6) {
+    if(!oldMember.roles.has(VIPRoomRole)) return;
+    oldMember.removeRole(VIPRoomRole)
+  };
+
+  if(oldUserChannel.id == process.env.Channel7) {
+    if(!oldMember.roles.has(SecretMusicRole)) return;
+    oldMember.removeRole(SecretMusicRole)
+  };
+
+  if(oldUserChannel.id == process.env.Channel8) {
+    if(!oldMember.roles.has(BerlogaRole)) return;
+    oldMember.removeRole(BerlogaRole)
+  };
+
+    }
+  });
+
 bot.login(process.env.TOKEN);
