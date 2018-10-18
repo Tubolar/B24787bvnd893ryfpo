@@ -791,42 +791,98 @@ bot.on('voiceStateUpdate', (oldMember, newMember) => {
   
   if(oldUserChannel.id == process.env.Channel1) {
     if(!oldMember.roles.has(dVoiceRole)) return;
-    oldMember.removeRole(dVoiceRole)
+    if(oldMember.roles.has(VoiceRole2)) oldMember.removeRole(VoiceRole2);
+    if(oldMember.roles.has(dVoiceRole)) oldMember.removeRole(dVoiceRole);
+    if(oldMember.roles.has(AFKrole)) oldMember.removeRole(AFKrole);
+    if(oldMember.roles.has(MusicRole2)) oldMember.removeRole(MusicRole2);
+    if(oldMember.roles.has(VIPRoomRole)) oldMember.removeRole(VIPRoomRole);
+    if(oldMember.roles.has(SecretMusicRole)) oldMember.removeRole(SecretMusicRole);
+    if(oldMember.roles.has(BerlogaRole)) oldMember.removeRole(BerlogaRole);
+    if(oldMember.roles.has(MusicRole1)) oldMember.removeRole(MusicRole1);
   };
 
   if(oldUserChannel.id == process.env.Channel2) {
     if(!oldMember.roles.has(VoiceRole2)) return;
-    oldMember.removeRole(VoiceRole2)
+    if(oldMember.roles.has(VoiceRole2)) oldMember.removeRole(VoiceRole2);
+    if(oldMember.roles.has(dVoiceRole)) oldMember.removeRole(dVoiceRole);
+    if(oldMember.roles.has(AFKrole)) oldMember.removeRole(AFKrole);
+    if(oldMember.roles.has(MusicRole2)) oldMember.removeRole(MusicRole2);
+    if(oldMember.roles.has(VIPRoomRole)) oldMember.removeRole(VIPRoomRole);
+    if(oldMember.roles.has(SecretMusicRole)) oldMember.removeRole(SecretMusicRole);
+    if(oldMember.roles.has(BerlogaRole)) oldMember.removeRole(BerlogaRole);
+    if(oldMember.roles.has(MusicRole1)) oldMember.removeRole(MusicRole1);
   };
 
   if(oldUserChannel.id == process.env.Channel3) {
     if(!oldMember.roles.has(AFKrole)) return;
-    oldMember.removeRole(AFKrole)
+    if(oldMember.roles.has(VoiceRole2)) oldMember.removeRole(VoiceRole2);
+    if(oldMember.roles.has(dVoiceRole)) oldMember.removeRole(dVoiceRole);
+    if(oldMember.roles.has(AFKrole)) oldMember.removeRole(AFKrole);
+    if(oldMember.roles.has(MusicRole2)) oldMember.removeRole(MusicRole2);
+    if(oldMember.roles.has(VIPRoomRole)) oldMember.removeRole(VIPRoomRole);
+    if(oldMember.roles.has(SecretMusicRole)) oldMember.removeRole(SecretMusicRole);
+    if(oldMember.roles.has(BerlogaRole)) oldMember.removeRole(BerlogaRole);
+    if(oldMember.roles.has(MusicRole1)) oldMember.removeRole(MusicRole1);
   };
 
   if(oldUserChannel.id == process.env.Channel4) {
     if(!oldMember.roles.has(MusicRole1)) return;
-    oldMember.removeRole(MusicRole1)
+    if(oldMember.roles.has(VoiceRole2)) oldMember.removeRole(VoiceRole2);
+    if(oldMember.roles.has(dVoiceRole)) oldMember.removeRole(dVoiceRole);
+    if(oldMember.roles.has(AFKrole)) oldMember.removeRole(AFKrole);
+    if(oldMember.roles.has(MusicRole2)) oldMember.removeRole(MusicRole2);
+    if(oldMember.roles.has(VIPRoomRole)) oldMember.removeRole(VIPRoomRole);
+    if(oldMember.roles.has(SecretMusicRole)) oldMember.removeRole(SecretMusicRole);
+    if(oldMember.roles.has(BerlogaRole)) oldMember.removeRole(BerlogaRole);
+    if(oldMember.roles.has(MusicRole1)) oldMember.removeRole(MusicRole1);
   };
   
   if(oldUserChannel.id == process.env.Channel5) {
-    if(!oldMember.roles.has(MusicRole2)) return;
-    oldMember.removeRole(MusicRole2)
+    if(!oldMember.roles.has(MusicRole1)) return;
+    if(oldMember.roles.has(VoiceRole2)) oldMember.removeRole(VoiceRole2);
+    if(oldMember.roles.has(dVoiceRole)) oldMember.removeRole(dVoiceRole);
+    if(oldMember.roles.has(AFKrole)) oldMember.removeRole(AFKrole);
+    if(oldMember.roles.has(MusicRole2)) oldMember.removeRole(MusicRole2);
+    if(oldMember.roles.has(VIPRoomRole)) oldMember.removeRole(VIPRoomRole);
+    if(oldMember.roles.has(SecretMusicRole)) oldMember.removeRole(SecretMusicRole);
+    if(oldMember.roles.has(BerlogaRole)) oldMember.removeRole(BerlogaRole);
+    if(oldMember.roles.has(MusicRole1)) oldMember.removeRole(MusicRole1);
   };
   
   if(oldUserChannel.id == process.env.Channel6) {
     if(!oldMember.roles.has(VIPRoomRole)) return;
-    oldMember.removeRole(VIPRoomRole)
+    if(oldMember.roles.has(VoiceRole2)) oldMember.removeRole(VoiceRole2);
+    if(oldMember.roles.has(dVoiceRole)) oldMember.removeRole(dVoiceRole);
+    if(oldMember.roles.has(AFKrole)) oldMember.removeRole(AFKrole);
+    if(oldMember.roles.has(MusicRole2)) oldMember.removeRole(MusicRole2);
+    if(oldMember.roles.has(VIPRoomRole)) oldMember.removeRole(VIPRoomRole);
+    if(oldMember.roles.has(SecretMusicRole)) oldMember.removeRole(SecretMusicRole);
+    if(oldMember.roles.has(BerlogaRole)) oldMember.removeRole(BerlogaRole);
+    if(oldMember.roles.has(MusicRole1)) oldMember.removeRole(MusicRole1);
   };
 
   if(oldUserChannel.id == process.env.Channel7) {
     if(!oldMember.roles.has(SecretMusicRole)) return;
-    oldMember.removeRole(SecretMusicRole)
+    if(oldMember.roles.has(VoiceRole2)) oldMember.removeRole(VoiceRole2);
+    if(oldMember.roles.has(dVoiceRole)) oldMember.removeRole(dVoiceRole);
+    if(oldMember.roles.has(AFKrole)) oldMember.removeRole(AFKrole);
+    if(oldMember.roles.has(MusicRole2)) oldMember.removeRole(MusicRole2);
+    if(oldMember.roles.has(VIPRoomRole)) oldMember.removeRole(VIPRoomRole);
+    if(oldMember.roles.has(SecretMusicRole)) oldMember.removeRole(SecretMusicRole);
+    if(oldMember.roles.has(BerlogaRole)) oldMember.removeRole(BerlogaRole);
+    if(oldMember.roles.has(MusicRole1)) oldMember.removeRole(MusicRole1);
   };
 
   if(oldUserChannel.id == process.env.Channel8) {
-    if(!oldMember.roles.has(BerlogaRole)) return;
-    oldMember.removeRole(BerlogaRole)
+    if(!oldMember.roles.has(SecretMusicRole)) return;
+    if(oldMember.roles.has(VoiceRole2)) oldMember.removeRole(VoiceRole2);
+    if(oldMember.roles.has(dVoiceRole)) oldMember.removeRole(dVoiceRole);
+    if(oldMember.roles.has(AFKrole)) oldMember.removeRole(AFKrole);
+    if(oldMember.roles.has(MusicRole2)) oldMember.removeRole(MusicRole2);
+    if(oldMember.roles.has(VIPRoomRole)) oldMember.removeRole(VIPRoomRole);
+    if(oldMember.roles.has(SecretMusicRole)) oldMember.removeRole(SecretMusicRole);
+    if(oldMember.roles.has(BerlogaRole)) oldMember.removeRole(BerlogaRole);
+    if(oldMember.roles.has(MusicRole1)) oldMember.removeRole(MusicRole1);
   };
 
     }
