@@ -696,7 +696,7 @@ bot.on('voiceStateUpdate', (oldMember, newMember) => {
         newMember.addRole(VoiceRole2)
     }
 
-    if(newUserChannel.id == process.env.Channel3 {
+    if(newUserChannel.id == process.env.Channel3) {
         if(newMember.roles.has(AFKrole)) return;
         newMember.addRole(AFKrole)
     }
