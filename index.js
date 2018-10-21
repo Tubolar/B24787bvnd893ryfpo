@@ -968,6 +968,6 @@ if(oldUserChannel.id === process.env.Channel8) {
   };
 
     };
-  }};) 
+  }}) 
 
 bot.login(process.env.TOKEN);
