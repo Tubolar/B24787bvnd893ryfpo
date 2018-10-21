@@ -803,7 +803,7 @@ if(newUserChannel.id === process.env.Channel2) {
     if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
     if(!newMember.roles.has(VoiceRole2)) newMember.addRole(VoiceRole2);
 };
-if(oldUserChannel.id === process.env.Channel3) {
+if(newUserChannel.id === process.env.Channel3) {
     if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
     if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
     if(newMember.roles.has(AFKrole)) return;
@@ -814,7 +814,7 @@ if(oldUserChannel.id === process.env.Channel3) {
     if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
     if(!newMember.roles.has(AFKrole)) newMember.addRole(AFKrole);
 };
-if(oldUserChannel.id === process.env.Channel4) {
+if(newUserChannel.id === process.env.Channel4) {
     if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
     if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
     if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
@@ -825,7 +825,7 @@ if(oldUserChannel.id === process.env.Channel4) {
     if(newMember.roles.has(MusicRole1)) return;
     if(!newMember.roles.has(MusicRole1)) newMember.addRole(MusicRole1);
 };
-if(oldUserChannel.id === process.env.Channel5) {
+if(newUserChannel.id === process.env.Channel5) {
     if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
     if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
     if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
@@ -836,7 +836,7 @@ if(oldUserChannel.id === process.env.Channel5) {
     if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
     if(!newMember.roles.has(MusicRole2)) newMember.addRole(MusicRole2);
 };
-if(oldUserChannel.id === process.env.Channel6) {
+if(newUserChannel.id === process.env.Channel6) {
     if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
     if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
     if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
@@ -847,7 +847,7 @@ if(oldUserChannel.id === process.env.Channel6) {
     if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
     if(!newMember.roles.has(VIPRoomRole)) newMember.addRole(VIPRoomRole);
 };
-if(oldUserChannel.id === process.env.Channel7) {
+if(newUserChannel.id === process.env.Channel7) {
     if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
     if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
     if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
@@ -857,7 +857,7 @@ if(oldUserChannel.id === process.env.Channel7) {
     if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
     if(!newMember.roles.has(SecretMusicRole)) newMember.addRole(SecretMusicRole);
 };
-if(oldUserChannel.id === process.env.Channel8) {
+if(newUserChannel.id === process.env.Channel8) {
     if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
     if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
     if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
