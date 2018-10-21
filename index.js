@@ -967,7 +967,7 @@ if(oldUserChannel.id === process.env.Channel8) {
     if(oldMember.roles.has(MusicRole1)) oldMember.removeRole(MusicRole1);
   };
 
-    }
-  }; 
+    };
+  }};) 
 
 bot.login(process.env.TOKEN);
