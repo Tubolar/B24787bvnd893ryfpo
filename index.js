@@ -780,7 +780,8 @@ bot.on('voiceStateUpdate', (oldMember, newMember) => {
         if(newMember.roles.has(BerlogaRole)) return;
         if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
         if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
-    } else if(!oldUserChannel && newUserChannel) {
+    } 
+	    if(!oldUserChannel && newUserChannel) {
 if(newUserChannel.id === process.env.Channel1) {
     if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
     if(newMember.roles.has(dVoiceRole)) return;
