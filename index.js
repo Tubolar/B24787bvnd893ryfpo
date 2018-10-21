@@ -675,7 +675,7 @@ bot.on("message", async message =>{
     }
 });
 
-/*bot.on('voiceStateUpdate', (oldMember, newMember) => {
+bot.on('voiceStateUpdate', (oldMember, newMember) => {
     let newUserChannel = newMember.voiceChannel;
     let oldUserChannel = oldMember.voiceChannel;
     let dVoiceRole = process.env.dVoiceRole;
@@ -780,14 +780,96 @@ bot.on("message", async message =>{
         if(newMember.roles.has(BerlogaRole)) return;
         if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
         if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
-    }
-
-
-
-
-
-
-    } else if(newUserChannel === undefined){
+    } else if(!oldUserChannel && newUserChannel) {
+if(oldUserChannel.id === "419522102740123648") {
+    if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
+    if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
+    if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
+    if(newMember.roles.has(MusicRole2)) newMember.removeRole(MusicRole2);
+    if(newMember.roles.has(VIPRoomRole)) newMember.removeRole(VIPRoomRole);
+    if(newMember.roles.has(SecretMusicRole)) newMember.removeRole(SecretMusicRole);
+    if(newMember.roles.has(BerlogaRole)) newMember.removeRole(BrlogaRole);
+    if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
+    if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
+};
+if(oldUserChannel.id === "419522364431400971") {
+    if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
+    if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
+    if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
+    if(newMember.roles.has(MusicRole2)) newMember.removeRole(MusicRole2);
+    if(newMember.roles.has(VIPRoomRole)) newMember.removeRole(VIPRoomRole);
+    if(newMember.roles.has(SecretMusicRole)) newMember.removeRole(SecretMusicRole);
+    if(newMember.roles.has(BerlogaRole)) newMember.removeRole(BrlogaRole);
+    if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
+    if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
+};
+if(oldUserChannel.id === "414535069995237379") {
+    if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
+    if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
+    if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
+    if(newMember.roles.has(MusicRole2)) newMember.removeRole(MusicRole2);
+    if(newMember.roles.has(VIPRoomRole)) newMember.removeRole(VIPRoomRole);
+    if(newMember.roles.has(SecretMusicRole)) newMember.removeRole(SecretMusicRole);
+    if(newMember.roles.has(BerlogaRole)) newMember.removeRole(BrlogaRole);
+    if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
+    if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
+};
+if(oldUserChannel.id === "414537896603680779") {
+    if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
+    if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
+    if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
+    if(newMember.roles.has(MusicRole2)) newMember.removeRole(MusicRole2);
+    if(newMember.roles.has(VIPRoomRole)) newMember.removeRole(VIPRoomRole);
+    if(newMember.roles.has(SecretMusicRole)) newMember.removeRole(SecretMusicRole);
+    if(newMember.roles.has(BerlogaRole)) newMember.removeRole(BrlogaRole);
+    if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
+    if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
+};
+if(oldUserChannel.id === "414538015600410624") {
+    if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
+    if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
+    if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
+    if(newMember.roles.has(MusicRole2)) newMember.removeRole(MusicRole2);
+    if(newMember.roles.has(VIPRoomRole)) newMember.removeRole(VIPRoomRole);
+    if(newMember.roles.has(SecretMusicRole)) newMember.removeRole(SecretMusicRole);
+    if(newMember.roles.has(BerlogaRole)) newMember.removeRole(BrlogaRole);
+    if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
+    if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
+};
+if(oldUserChannel.id === "444985435941371904") {
+    if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
+    if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
+    if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
+    if(newMember.roles.has(MusicRole2)) newMember.removeRole(MusicRole2);
+    if(newMember.roles.has(VIPRoomRole)) newMember.removeRole(VIPRoomRole);
+    if(newMember.roles.has(SecretMusicRole)) newMember.removeRole(SecretMusicRole);
+    if(newMember.roles.has(BerlogaRole)) newMember.removeRole(BrlogaRole);
+    if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
+    if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
+};
+if(oldUserChannel.id === "414528524943228933") {
+    if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
+    if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
+    if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
+    if(newMember.roles.has(MusicRole2)) newMember.removeRole(MusicRole2);
+    if(newMember.roles.has(VIPRoomRole)) newMember.removeRole(VIPRoomRole);
+    if(newMember.roles.has(SecretMusicRole)) newMember.removeRole(SecretMusicRole);
+    if(newMember.roles.has(BerlogaRole)) newMember.removeRole(BrlogaRole);
+    if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
+    if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
+};
+if(oldUserChannel.id === "417026318249623552") {
+    if(newMember.roles.has(VoiceRole2)) newMember.removeRole(VoiceRole2);
+    if(newMember.roles.has(dVoiceRole)) newMember.removeRole(dVoiceRole);
+    if(newMember.roles.has(AFKrole)) newMember.removeRole(AFKrole);
+    if(newMember.roles.has(MusicRole2)) newMember.removeRole(MusicRole2);
+    if(newMember.roles.has(VIPRoomRole)) newMember.removeRole(VIPRoomRole);
+    if(newMember.roles.has(SecretMusicRole)) newMember.removeRole(SecretMusicRole);
+    if(newMember.roles.has(BerlogaRole)) newMember.removeRole(BrlogaRole);
+    if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
+    if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
+}
+} else if(newUserChannel === undefined){
   
   if(oldUserChannel.id == process.env.Channel1) {
     if(!oldMember.roles.has(dVoiceRole)) return;
@@ -886,6 +968,6 @@ bot.on("message", async message =>{
   };
 
     }
-  }); */
+  }); 
 
 bot.login(process.env.TOKEN);
