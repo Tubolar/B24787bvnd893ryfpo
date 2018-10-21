@@ -865,7 +865,7 @@ if(oldUserChannel.id === process.env.Channel8) {
     if(newMember.roles.has(VIPRoomRole)) newMember.removeRole(VIPRoomRole);
     if(newMember.roles.has(BerlogaRole)) return;
     if(newMember.roles.has(MusicRole1)) newMember.removeRole(MusicRole1);
-    if(!newMember.roles.has(BerlogaRole)) newMember.addRole(SecretMusicRole);
+    if(!newMember.roles.has(BerlogaRole)) newMember.addRole(BerlogaRole);
 }
 } else if(newUserChannel === undefined){
   
