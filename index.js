@@ -675,7 +675,7 @@ bot.on("message", async message =>{
     }
 });
 
-bot.on('voiceStateUpdate', (oldMember, newMember) => {
+/*bot.on('voiceStateUpdate', (oldMember, newMember) => {
     let newUserChannel = newMember.voiceChannel;
     let oldUserChannel = oldMember.voiceChannel;
     let dVoiceRole = process.env.dVoiceRole;
@@ -966,6 +966,6 @@ if(newUserChannel.id === process.env.Channel8) {
   };
 
     };
-  }}) 
+  }})  В падлу искать ошибку */
 
 bot.login(process.env.TOKEN);
