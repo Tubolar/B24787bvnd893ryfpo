@@ -13,10 +13,10 @@ module.exports.run = async (bot, message, args) => {
             let tRole = message.guild.roles.find("name", "Elite");
             let dRole = message.guild.roles.find("name", "Посетитель");
             let rdRole = message.guild.roles.find("name", "Гость");
-            let cArole = ["#080707", "#080707", "#080707", "#310125", "#191f20"];
-            let ctRole = ["#000066","#000000","#333399","#4040bf"];
-            let cdRole = ["#95291d","#d53b2a","#d94f3f","#aa2f22"];
-            let crdRole = ["#217961","#1b6451","#268c71","#31b491"];
+            let cArole = ["#080707", "#080707", "#080707", "#310125", "#191f20", "#000000"];
+            let ctRole = ["#663300", "#660066", "#006666", "#cc3300", "#ffcc00", "#993333", "#9999ff", "#339933", "#0033cc", "#e699ff", "#030303"];
+            let cdRole = ["#003300","#66ff99","#ff8c1a","#b30000", "#996633", "#75a3a3", "#4d4dff", "#008040", "#00ffff", "#00ffff", "#95291d"];
+            let crdRole = ["#339966","#009999","#99bbff","#ffff4d", "#cccc00", "#4d4dff", "#ff3333", "#b32d00", "#330033"];
             let cctRoler = Math.floor((Math.random() * ctRole.length)); 
             let ccdRoler = Math.floor((Math.random() * cdRole.length)); 
             let ccrdRoler = Math.floor((Math.random() * crdRole.length)); 
