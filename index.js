@@ -967,5 +967,7 @@ if(newUserChannel.id === process.env.Channel8) {
 
     };
   }})  В падлу искать ошибку */
-
+bot.on("disonnected", async () =>  {
+    bot.login(process.env.TOKEN)
+});
 bot.login(process.env.TOKEN);
