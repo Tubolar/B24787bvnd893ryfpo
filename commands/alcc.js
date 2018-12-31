@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
             let tRole = message.guild.roles.find("name", "High");
             let dRole = message.guild.roles.find("name", "Medium");
             let rdRole = message.guild.roles.find("name", "Low");
-            let btRole = message.guild.roles.find("name", "БОТ");
+            let btRole = message.guild.roles.find("name", "Бот");
             /*let cArole = ["#080707", "#080707", "#080707", "#310125", "#191f20", "#000000"];
             let ctRole = ["#663300", "#660066", "#006666", "#cc3300", "#ffcc00", "#993333", "#9999ff", "#339933", "#0033cc", "#e699ff", "#030303"];
             let cdRole = ["#003300","#66ff99","#ff8c1a","#b30000", "#996633", "#75a3a3", "#4d4dff", "#008040", "#00ffff", "#00ffff", "#95291d"];
