@@ -305,11 +305,12 @@ bot.on("guildMemberAdd", async member => {
     .setColor(0x0891c9e)
     .setFooter("Группа TOP-GAMERS", "https://cdn.discordapp.com/icons/414528524943228928/832c18e030aec2e667e1a22bb01e3ae7.jpg")
     
-    try {
-    member.send(mEmbed) 
-    } catch (e) {
-	    channel.send(`**\`[RU]\`**${member},так как у вас закрыт ЛС,прочтите следующую инструкцию в этом канале.\n\n**\`[EN]\`**${member},since you have a closed DM, read the following instructions in this channel.`).then(sent => sent.delete(60000))
-    channel.send(mEmbed).then(sent => sent.delete(60000))}
+    member.send(mEmbed).catch(e => {
+	    if(e) {
+    channel.send(`**\`[RU]\`**${member},так как у вас закрыт ЛС,прочтите следующую инструкцию в этом канале.\n\n**\`[EN]\`**${member},since you have a closed DM, read the following instructions in this channel.`).then(sentms => sentms.delete(60000))
+    channel.send(mEmbed).then(sentm => sentm.delete(60000))
+	    };
+    });
 })
 
 bot.on("guildMemberRemove", async member => {
