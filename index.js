@@ -69,164 +69,7 @@ bot.on("message", async message => {
     }
 });
 
-/*var usage = "`++hangman <ID канала> <ваша фраза>`\n`Пример: ++hangman 368845035560763402 pelmeni`"
-var letters = ["🇦", "🇧", "🇨", "🇩", "🇪", "🇫", "🇬", "🇭", "🇮", "🇯", "🇰", "🇱", "🇲", "🇳", "🇴", "🇵", "🇶", "🇷", "🇸", "🇹", "🇺", "🇻", "🇼", "🇽", "🇾", "🇿"];
-var unicode = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-var games = [];
-
-var stages = [`\`\`\`
-/---|
-|   
-|
-|
-|
-\`\`\`
-`, `\`\`\`
-/---|
-|   😲
-|
-|
-|
-\`\`\`
-`, `\`\`\`
-/---|
-|   😲
-|   |
-| 
-|
-\`\`\`
-`, `\`\`\`
-/---|
-|   😲
-|  /|
-|
-|
-\`\`\`
-`, `\`\`\`
-/---|
-|   😲
-|  /|\\
-|
-|
-\`\`\`
-`, `\`\`\`
-/---|
-|   😲
-|  /|\\
-|  /
-|
-\`\`\`
-`, `\`\`\`
-/---|
-|   😲 ~ Вы проиграли,игра окончена.
-|  /|\\
-|  / \\
-|
-\`\`\`
-`];
-
-function generateMessage(phrase, guesses) {
-	var s = "";
-	for(var i = 0; i < phrase.length; i++) {
-		if(phrase[i] == ' ')
-			s += " ";
-		else {
-			var c = phrase[i];
-			if(guesses.indexOf(c) == -1)
-				c = "\\_";
-			s += "__" + c + "__ ";
-		}
-	}
-	return s;
-}
-
-function nextLetter(message, index, word) {
-    message.react(letters[index]).then(r => {
-		index++;
-		if(index < letters.length) {
-			if(index == 13) {
-				message.channel.send(generateMessage(word, [])).then(m => {
-					games.push({
-						stage: 0,
-						msg0: message,
-						msg1: m,
-						phrase: word,
-						guesses: []
-					});
-					nextLetter(m, index);
-				});
-			} else {
-				nextLetter(message, index, word);
-			}
-		}
-	});
-}
-
-bot.on('messageReactionAdd', (reaction, user) => {
-	var msg = reaction.message;
-	if(!user.bot) {
-		for(var i = 0; i < games.length; i++) {
-			var game = games[i];
-			if((msg.id == game.msg0.id || msg.id == game.msg1.id) && game.stage < stages.length) {
-				var letter = unicode[letters.indexOf(reaction.emoji.name)];
-				
-				reaction.fetchUsers().then(usrs => {
-					var reactors = usrs.array();
-					var remove_next = function(index) {
-						if(index < reactors.length)
-							reaction.remove(reactors[index]).then(() => remove_next(index + 1));
-					};
-					
-					remove_next(0);
-				});
-				
-				if(game.guesses.indexOf(letter) == -1) {
-					game.guesses.push(letter);
-					if(game.phrase.indexOf(letter) == -1) {
-						game.stage ++;
-						game.msg0.edit(stages[game.stage]);
-					} else {
-						var sik = true;
-						for(var j = 0; j < game.phrase.length; j++) {
-							var c = game.phrase[j];
-							if(c != ' ' && game.guesses.indexOf(c) == -1) {
-								sik = false;
-							}
-						}
-						
-						if(sik) {
-                            game.msg0.edit(stages[game.stage].replace("😲", "🙂 ~ Верно!Игра окончена"));
-                        }
-
-                        
-						game.msg1.edit(generateMessage(game.phrase, game.guesses));
-					}
-				}
-			}
-			games[i] = game;
-		}
-	}
-});
-
-bot.on('message', msg => {
-    if(msg.content.startsWith("++hangman")) {
-        var words = msg.content.split('\n')[0].split(' ');
-        if(words.length < 2) {
-            msg.reply(usage);
-        } else {
-            var channel = bot.channels.find('id', words[1]);
-			var word = words.slice(2).join(' ').toLowerCase().replace(/[^a-z\s:]/g, '');
-            if(channel != null) {
-                channel.send(stages[0]).then(m => {
-                    nextLetter(m, 0, word);
-                });
-            } else {
-                msg.reply("Не могу найти канал с указанным идентификатором `" + words[1] + "` его не существует на данном сервере! \n" + usage);
-            }
-        }
-    }
-});*/
 
 bot.on("message", async message => {
     if(message.author.bot) return;
@@ -448,7 +291,7 @@ bot.on("guildMemberAdd", async member => {
     wEmbed.setTitle(`Новый участник! ${ES8}`)
     wEmbed.setDescription(`Эй ${member},добро пожаловать на сервер TOP-GAMERS.`)
     wEmbed.addField(`Дополнительная информация ${ES11}`, "Обязательно прочитай правила в канале <#414531689151332366>,чтобы избежать проблем в дальнейшем.")
-    wEmbed.addField(`Additional information ${ES11}`, "Be sure to read the rules in the channel <#414531689151332366>, in order to avoid problems in the future.")
+    wEmbed.addField(`Additional information ${ES11}`, "Be sure to read the rules in the channel <#459000607760580609>, in order to avoid problems in the future.")
     wEmbed.setFooter("Группа TOP-GAMERS")
     wEmbed.setThumbnail("https://cdn.discordapp.com/icons/414528524943228928/832c18e030aec2e667e1a22bb01e3ae7.jpg")
     wEmbed.setColor(0x0891c9e)
@@ -461,7 +304,12 @@ bot.on("guildMemberAdd", async member => {
     .addField("Access to some voice and text channels", "To get the right to send messages on the server, you need to have a confirmed phone number for your Discord account.\nAfter you confirm the phone, you will get the right to send messages in the channel <#462942047813500928>.\nFurther follow the instructions that are in the channel <#462943423830294540>." )
     .setColor(0x0891c9e)
     .setFooter("Группа TOP-GAMERS", "https://cdn.discordapp.com/icons/414528524943228928/832c18e030aec2e667e1a22bb01e3ae7.jpg")
-    member.send(mEmbed)
+    
+    try {
+    member.send(mEmbed) 
+    } catch (e) {
+	    channel.send(`**\`[RU]\`**${member},так как у вас закрыт ЛС,прочтите следующую инструкцию в этом канале.\n\n**\`[EN]\`**${member},since you have a closed DM, read the following instructions in this channel.`).then(sent => sent.delete(60000))
+    channel.send(mEmbed).then(sent => sent.delete(60000))}
 })
 
 bot.on("guildMemberRemove", async member => {
