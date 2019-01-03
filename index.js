@@ -207,7 +207,7 @@ bot.on("message", message => {
 bot.on("message", async message => {
 	if(message.channel.type === "dm") return;
         if(message.author.bot) return;
-	if(message.author.id == "336807875605168128") return;
+	//if(message.author.id == "336807875605168128") return;
 const Identify = [/(с|c|s)(y|у|(.*?))(к|k|(.*?))(a|а|(.*?))/gi, /(е|e)((.*?)|б|b)(a|а|(.*?))(т|t|(.*?))(b|ь|(.*?))/gi, /(x|х|(.*?))(у|y|(.*?))(й|n|^[a-z\s:]|^[а-я\s:])/gi, /(п|p|р)(и|й|n|(.*?))(з|z|(.*?))(д|d|(.*?))(a|а|(.*?))/gi];
 
 const Role = message.guild.roles.find(`name`, 'Mute')
