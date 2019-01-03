@@ -208,29 +208,16 @@ bot.on("message", async message => {
 	if(message.channel.type === "dm") return;
         if(message.author.bot) return;
 	if(message.author.id == "336807875605168128") return;
-const enBadw = [/fack/i, /fuuck/i, /cock/i, /tits/i, /bitc/i, /fuck/i, /gay/i, /sucker/i, /hick/i, /pussy/i, /bich/i, /stup/i, /dick/i, /penis/i, /prosti/i,/tart/i, /fuc/i, /noob/i, /fck/i, /schmuck/i, /paddel/i, /cur/i, /autism/i, /chmo/i, /eb/i, /sosi/i, /xu/i, /nyb/i, /xyesos/i, /lox/i, /typo/i, /sex/i, /секас/i, /секс/i, /sekas/i, /gom/i, /gnid/i, /piska/i, /sis/i, /bomz/i, /boln/i, /aytist/i, /dayn/i, /loh/i, /swinia/i, /plun/i];
+const Identify = [/(с|c|s)(y|у|(.*?))(к|k|(.*?))(a|а|(.*?))/gi, /(е|e)((.*?)|б|b)(a|а|(.*?))(т|t|(.*?))(b|ь|(.*?))/gi, /(x|х|(.*?))(у|y|(.*?))(й|n|^[a-z\s:]|^[а-я\s:])/gi, /(п|p|р)(и|й|n|(.*?))(з|z|(.*?))(д|d|(.*?))(a|а|(.*?))/gi];
 
 const Role = message.guild.roles.find(`name`, 'Mute')
-if(enBadw.some(word => message.content.match(word)) ) {
-  message.member.addRole(Role)
+if(Identify.some(word => message.content.match(word))) {
+  message.member.addRole(Role.id)
   message.delete()
   
 }
 });
 
-bot.on("message", async message => {
-	if(message.channel.type === "dm") return;
-        if(message.author.bot) return;
-	if(message.author.id == "336807875605168128") return;
-const enBadw = [/сук/i, /сучк/i, /аморальный/i, /чмо/i, /гей/i, /пид/i, /соси/i, /сись/i, /еб/i, /гнида/i, /паскуда/i, /тупой/i, /лох/i];
-
-const Role = message.guild.roles.find(`name`, 'Mute')
-if(enBadw.some(word => message.content.match(word)) ) {
-  message.member.addRole(Role)
-  message.delete()
-  
-}
-});
 bot.on("message", async message => {
 	if(message.channel.type === "dm") return;
     if(message.author.bot) return;
