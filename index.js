@@ -204,7 +204,7 @@ bot.on("message", message => {
       }
 })
 
-bot.on("message", async message => {
+/*bot.on("message", async message => {
 	if(message.channel.type === "dm") return;
         if(message.author.bot) return;
 	//if(message.author.id == "336807875605168128") return;
@@ -216,7 +216,7 @@ if(Identify.some(word => message.content.match(word))) {
   message.delete()
   
 }
-});
+});*/
 
 bot.on("message", async message => {
 	if(message.channel.type === "dm") return;
