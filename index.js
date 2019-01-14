@@ -208,7 +208,7 @@ bot.on("message", async message => {
 	if(message.channel.type === "dm") return;
         if(message.author.bot) return;
 	//if(message.author.id == "336807875605168128") return;
-const Identify = [/((\S|\s)(с|c|s|)(y|y|u)(k|к)(a?|а?|\S?))|(((с|c|s)(.*?)(k|к)(a|а|\S)))|((с|c|s)((.*?)(k|к)))/gi, /((б(.*?)|b(.*?))(l|л)(я|r)(tb|ть?)\S)/gi, /((x|х)(y|у)(n|й))|((\S|\s)(x|x)(.*?)(n|й))/gi, /(п|p|р)(.*?)(d|д|)/gi];
+const Identify = [/((\S|\s)(с|c|s|)(y|y|u)(k|к)(a?|а?|\S?))|(((с|c|s)(.*?)(k|к)(a|а|\S)))|((с|c|s)((.*?)(k|к)))/gi, /((б(.*?)|b(.*?))(l|л)(я|r)(tb?|ть?)\S)/gi, /((x|х)(y|у)(n|й))|((\S|\s)(x|x)(.*?)(n|й))/gi, /(п|p|р)(.*?)(d|д)/gi];
 
 const Role = message.guild.roles.find(`name`, 'Mute')
 if(Identify.some(word => message.content.match(word))) {
