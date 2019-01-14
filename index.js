@@ -202,13 +202,13 @@ bot.on("message", message => {
         message.reply(`у Вас недостаточно прав.`);
         }
       }
-})
+});
 
-/*bot.on("message", async message => {
+bot.on("message", async message => {
 	if(message.channel.type === "dm") return;
         if(message.author.bot) return;
 	//if(message.author.id == "336807875605168128") return;
-const Identify = [/(с|c|s)(y|у|(.*?))(к|k|(.*?))(a|а|(.*?))/gi, /(е|e)((.*?)|б|b)(a|а|(.*?))(т|t|(.*?))(b|ь|(.*?))/gi, /(x|х|(.*?))(у|y|(.*?))(й|n|^[a-z\s:]|^[а-я\s:])/gi, /(п|p|р)(и|й|n|(.*?))(з|z|(.*?))(д|d|(.*?))(a|а|(.*?))/gi];
+const Identify = [/((\S|\s)(с|c|s|)(y|y|u)(k|к)(a?|а?|\S?))|(((с|c|s)(.*?)(k|к)(a|а|\S)))|((с|c|s)((.*?)(k|к)))/gi, /((б(.*?)|b(.*?))(l|л)(я|r)(tb|ть?)\S)/gi, /((x|х)(y|у)(n|й))|((\S|\s)(x|x)(.*?)(n|й))/gi, /(п|p|р)(.*?)(d|д|^[а-z])/gi];
 
 const Role = message.guild.roles.find(`name`, 'Mute')
 if(Identify.some(word => message.content.match(word))) {
@@ -216,13 +216,13 @@ if(Identify.some(word => message.content.match(word))) {
   message.delete()
   
 }
-});*/
+});
 
 bot.on("message", async message => {
 	if(message.channel.type === "dm") return;
     if(message.author.bot) return;
 	if(message.author.id == "336807875605168128") return;
-const filter = [/а/i, /б/i, /в/i, /г/i, /д/i, /е/i, /ё/i, /ж/i, /з/i, /и/i, /й/i, /к/i, /л/i, /м/i, /н/i, /о/i, /п/i, /р/i, /с/i, /т/i, /у/i, /ф/i, /х/i, /ц/i, /ч/i, /ш/i, /щ/i, /ъ/i, /ы/i, /ь/i, /э/i, /ю/i, /я/i]
+const filter = /^[а-я]/gi;
 if(message.channel.id == '414534158761852938') {
 if(filter.some(word => message.content.match(word)) ) {
   message.delete()
