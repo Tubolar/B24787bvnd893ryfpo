@@ -32,7 +32,7 @@ jsfile.forEach((f, i) =>{
 
 bot.on("message", async message => {
     if(message.author.bot) return;
-    if(message.channel.type === "dm" || message.author.id !== process.env.UID) return; //test
+    if(message.channel.type === "dm") return;
 
     let prefix = botconfig.prefix;
     let messageArray = message.content.split(" ");
