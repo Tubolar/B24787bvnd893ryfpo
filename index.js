@@ -41,7 +41,19 @@ bot.on("message", async message => {
 
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot, message, args);
+	if(message.author.id === process.env.OID) {
+           if(message.content.startsWith("++esi")) {
+		   bot.messages.get(args[0]).then(s => {
+		   var sE = new Discord.RichEmbed()
+		   .setTitle("Основная информация Discord")
+		   .addField("Helper", Math.round(bot.ping) + "ms", true)
+		   .addField("API", message.timestamp - s.timestamp + "ms", true)
+		   .setFooter("Момент на")
+		   .setTimestamp(s.timestamp);
+	           setInterval(() => {s.edit(sE)}, "60000")
+		    })
       
+	
 });
 
 });
@@ -262,7 +274,6 @@ bot.on("message", async message => {
         try {
             message.channel.send(embed) 
         } catch (error) {
-            console.error("Error!O,o")
             message.channel.send("Данная команда не найдена")
         }
         
