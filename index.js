@@ -343,4 +343,4 @@ bot.on("message", async message =>{
 bot.on("disonnected", async () =>  {
     bot.login(process.env.TOKEN)
 });
-bot.login(process.env.TOKEN);
+bot.login(process.env.TOKEN)
