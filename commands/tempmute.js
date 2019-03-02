@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     let muterole = message.guild.roles.find(`name`, "Mute");
     let mutetime = args[1];
     if(!mutetime) return message.reply(",Вы не указали время");
-                var randomTime = Math.floor(Math.random() * 7);
+                var randomTime = Math.floor(Math.random() * (7 - 1) + 1);
                 var randomTime2 = Math.floor(Math.random() * ["m", "h", "d"].length);
                 var random2T = ["m", "h", "d"][randomTime2];
                 
@@ -21,16 +21,16 @@ module.exports.run = async (bot, message, args) => {
     if(message.member.roles.has(modRole.id)) {
     await(tomute.addRole(muterole.id));
     message.reply(`<@${tomute.id}> получил запрет на **разговор в текстовых каналах на **${ms(ms(mutetime))}`);
-    } else {
+    }else {
         message.channel.send(`Ну что же,некая особа <@${message.author.id}>,за твоё нефиг делать я даю тебе мут на \`дай-ка подумаю...\``).then(sent => {
             setTimeout(() => {
                 sent.edit(`Ну что же,некая особа <@${message.author.id}>,за твоё нефиг делать я даю тебе мут на \`${ToSend}.\``)
                 .then(message.member.addRole(muterole.id))
-            })  
+            }, "30000")  
         }).then(setTimeout(() => {
-            message.member.removeRole(muterole.id).then(message.channnel.send(`${message.member},с тебя был снят запрет на отправку сообщений в текстовых каналах.`))
+            message.member.removeRole(muterole.id)
         }), ms(randomTime + random2T)) 
-    }
+    };
     let moddRole = message.guild.roles.find("name", "Moderator");
     if(message.member.roles.has(moddRole.id)) {
     setTimeout(function(){
