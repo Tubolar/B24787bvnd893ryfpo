@@ -21,16 +21,17 @@ module.exports.run = async (bot, message, args) => {
     if(message.member.roles.has(modRole.id)) {
     await(tomute.addRole(muterole.id));
     message.reply(`<@${tomute.id}> получил запрет на **разговор в текстовых каналах на **${ms(ms(mutetime))}`);
-    }else {
+    } else {
         message.channel.send(`Ну что же,некая особа <@${message.author.id}>,за твоё нефиг делать я даю тебе мут на \`дай-ка подумаю...\``).then(sent => {
             setTimeout(() => {
                 sent.edit(`Ну что же,некая особа <@${message.author.id}>,за твоё нефиг делать я даю тебе мут на \`${ToSend}.\``)
                 .then(message.member.addRole(muterole.id))
-            }, "30000")  
-        }).then(setTimeout(() => {
-            message.member.removeRole(muterole.id)
-        }), ms(randomTime + random2T)) 
-    };
+            }, "30000")
+            setTimeout(() => {
+                message.member.removeRole(muterole.id)
+            }, ms(randomTime + random2T) + 30000)
+        })
+    }
     let moddRole = message.guild.roles.find("name", "Moderator");
     if(message.member.roles.has(moddRole.id)) {
     setTimeout(function(){
