@@ -5,7 +5,6 @@ const botconfig = require("./botconfig.json");
 var bot = new Discord.Client();
 const cmds = require('./cmds_strings.json');
 const cmd = require('./cmd_strings.json');
-const ENVIRONMENT = new Discord.WebhookClient(process.env.ENVIRONMENT_ID, process.env.ENVIRONMENT_POTION);
 bot.commands = new Discord.Collection();
 
 
@@ -63,7 +62,6 @@ bot.on("ready", () => {
     var channel = bot.channels.get('448546642375868436');
     channel.sendMessage("Бот `Helper` снова в сети.");
     console.log('Бот готов');
-	ENVIRONMENT.send("Working!")
 });
 
 
