@@ -28,7 +28,7 @@ jsfile.forEach((f, i) =>{
     console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
 });
-
+});
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
@@ -324,10 +324,7 @@ bot.on("message", async message =>{
         }
     }
 });
-
-
 bot.on("disonnected", async () =>  {
-    bot.login(process.env.TOKEN)
+    bot.login(process.env.TOKEN);
 });
 bot.login(process.env.TOKEN)
-
