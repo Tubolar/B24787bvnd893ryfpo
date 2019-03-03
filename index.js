@@ -1,4 +1,4 @@
-/*const Discord = require ("discord.js");
+const Discord = require ("discord.js");
 const embedColor = require("./embedcolor.json");
 const fs = require("fs");
 const botconfig = require("./botconfig.json");
@@ -40,7 +40,7 @@ bot.on("message", async message => {
 
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot, message, args);
-	/*if(message.author.id === process.env.OID) {
+	if(message.author.id === process.env.OID) {
            if(message.content.startsWith("++esi")) {
 		   bot.messages.get(args[0]).then(s => {
 		   var sE = new Discord.RichEmbed()
@@ -344,5 +344,4 @@ bot.on("disonnected", async () =>  {
     bot.login(process.env.TOKEN)
 });
 bot.login(process.env.TOKEN)
-*/
-console.log("!Issue.")
+
