@@ -1,4 +1,4 @@
-const Discord = require ("discord.js");
+/*const Discord = require ("discord.js");
 const embedColor = require("./embedcolor.json");
 const fs = require("fs");
 const botconfig = require("./botconfig.json");
@@ -53,7 +53,7 @@ bot.on("message", async message => {
 		    })
       
 	
-});*/
+});
 
 });
 
@@ -344,3 +344,5 @@ bot.on("disonnected", async () =>  {
     bot.login(process.env.TOKEN)
 });
 bot.login(process.env.TOKEN)
+*/
+console.log("!Issue.")
